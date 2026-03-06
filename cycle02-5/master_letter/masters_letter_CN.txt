@@ -1,0 +1,45 @@
+其实我越来越看不懂在做什么，在 Plan27 与 Plan28 多次介入改正。
+
+说十大宣言很重要，但一开始的规划你们还是将IGearArbiter放到了核心中。
+最后介入才修正正确，IGearArbiter 是 plugin 提供的齿轮路由仲裁器，决定 agent 该用哪个「齿轮」处理当前请求。
+这样才是所谓的识蕴。八识从眼识到阿赖耶识，是具备很多面向的，居然想要设定死成双齿轮，这是非常严重的错误。
+
+当然识蕴不是只有 IGearArbiter 这个机制而已。
+
+还有不是每一件事情都要硬性加上佛学的色彩，有些实在是很牵强附会。
+
+event-driven 不等于 正念，只是正念是用event-driven做的。
+
+觉察当下正在发生什么。这一层不看规则、不看风险分类，纯粹观察行为模式。不需要将它当作正念的工程化。
+而且这个plugin难道没有识蕴的成分在吗？ 如果依照唯识学派的分类，会将正念放在行蕴，那是因为它是指正向的运转。
+以这个plugin的功能来说，我觉得这是有争议的，因为在这个plugin的功能上，不仅仅是单纯的行为模式。
+所以我们要重新想的是这个plugin是由五蕴的哪一些类别组成。
+
+我们需要将五蕴有哪一些子类别，如何依赖注入，如何在agent core运行先处理好。架构先用好。
+agent core中如何将五蕴plugin载入。然后plugin要如何做。agent core中五蕴会如何流转。是我们的首要任务。
+
+什么教诫、善巧、正念，你做的工程映射都是有一些牵强的。反而增加阅读障碍。
+而且你的映射也非常有问题。
+openstarry_doc与相关的内容都需要修整回来。openstarry_doc还是属于工程文件。
+
+至于遍行心所、十二因缘、 认知序列 的相关概念有助于agent core的研究，可以讨论。
+就plugin来说，首要目标是建构五蕴的架构，参考面向对象的概念，来建立。
+
+NAGARJUNA 为三层框架提供了佛学映射。戒定慧三学。 我觉得没这个必要。未来我不知道，但现在没必要。
+五蕴的工程设计才是最重要需要实现的。
+
+----------
+
+研究cycle02-5
+参考文件
+research input\prior_research\cycle02-5\
+research input\research_version\cycle02-4_v0.28.0-alpha\
+research input\engineering_delivery\cycle02-4_plan28\
+research input\master_letters\cycle02-5\
+
+openstarry_doc最新的在
+research record\cycle02-4_Plan28\openstarry_doc
+
+以下文件是最新的状态
+research record\cycle02-4_Plan28\deliver\
+research record\cycle02-4_Plan28\todo\

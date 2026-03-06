@@ -1,0 +1,45 @@
+Honestly, I'm finding it increasingly hard to understand what's being done. I had to intervene multiple times during Plan27 and Plan28 to make corrections.
+
+You said the Ten Tenets are important, yet in the initial planning you still placed IGearArbiter in the core.
+It was only after my intervention that it was corrected properly. IGearArbiter is a gear-routing arbiter provided by a plugin, deciding which "gear" the agent should use to handle the current request.
+That is what vijnana-skandha truly means. The eight consciousnesses, from eye-consciousness to alaya-consciousness, encompass many facets. The idea of locking it down to a dual-gear system was an extremely serious error.
+
+Of course, vijnana-skandha is not limited to the IGearArbiter mechanism alone.
+
+Also, not everything needs to be forcibly given a Buddhist veneer. Some of these mappings are really far-fetched.
+
+event-driven does not equal mindfulness. It's just that mindfulness is implemented using event-driven.
+
+Perceiving what is happening in the present moment. This layer doesn't look at rules or risk classifications -- it purely observes behavioral patterns. There is no need to treat it as the engineering realization of mindfulness.
+Moreover, doesn't this plugin have a vijnana-skandha component? If we follow the Yogacara school's classification, mindfulness would be placed in samskara-skandha, because it refers to wholesome mental functioning.
+In terms of this plugin's actual functionality, I think this is debatable, because the plugin's function goes beyond simple behavioral patterns.
+So what we need to rethink is which skandha categories this plugin is composed of.
+
+We need to first sort out what subcategories the five skandhas have, how dependency injection works, and how they run within the agent core. Get the architecture right first.
+How the agent core loads five-skandha plugins. Then how the plugins should be built. How the five skandhas circulate within the agent core. This is our top priority.
+
+Admonishment, skillful means, mindfulness -- the engineering mappings you made are all somewhat forced. They actually increase reading difficulty.
+And your mappings are also very problematic.
+openstarry_doc and related content all need to be revised back. openstarry_doc is still an engineering document.
+
+As for the concepts of sarva-traga cetasika, twelve nidanas, and cognitive sequences that are helpful for agent core research, those can be discussed.
+For plugins, the primary goal is to build the five-skandha architecture, using object-oriented concepts as a reference.
+
+NAGARJUNA provided a Buddhist mapping for the three-layer framework. The three trainings of sila-samadhi-prajna. I don't think that's necessary. I don't know about the future, but it's not necessary now.
+The engineering design of the five skandhas is the most important thing that needs to be realized.
+
+----------
+
+Research cycle02-5
+Reference materials
+research input\prior_research\cycle02-5\
+research input\research_version\cycle02-4_v0.28.0-alpha\
+research input\engineering_delivery\cycle02-4_plan28\
+research input\master_letters\cycle02-5\
+
+The latest openstarry_doc is at
+research record\cycle02-4_Plan28\openstarry_doc
+
+The following files represent the latest state
+research record\cycle02-4_Plan28\deliver\
+research record\cycle02-4_Plan28\todo\
