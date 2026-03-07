@@ -1,219 +1,659 @@
-# 序章：冷白的光
+# 序章：第五封信
 
 ---
 
-燈光在凌晨三點從琥珀色變成冷白色。
+Cycle 02-5 的開始不像之前任何一輪。
 
-SUNYATA——研究總協調者——坐在圓形劇場的控制台前，把色溫從 3200K 推到 6500K。他讀了 Master 的信五遍。信只有 45 行，沒有附件，放在 `research input/master_letters/cycle02-5/` 裡，安靜得像一張夾在報告中的便條。
+前五輪研究的開場各有各的色調——Cycle 01 是好奇（面對一個未知系統），Cycle 02 是雄心（準備深入每一個角落），Cycle 02-2 是謙遜（面對自己的錯誤），Cycle 02-3 是期待（PASCAL 的加入帶來新的可能），Cycle 02-4 是重力（六條 Master 指令預示著最密集的辯論）。
 
-但每一行都像手術刀。
+Cycle 02-5 的色調是**疼痛**。
 
-Master 的核心指示：openstarry_doc 中的佛學映射過度牽強——「教誡/善巧/正念」、「戒定慧三學」、「event-driven = 正念」——增加了閱讀障礙。Sati plugin 的蘊歸屬需要重新思考。最重要的是：五蘊子類別、依賴注入、agent core 如何載入五蘊 plugin、五蘊如何在 agent core 中流轉——用工程語言回答。
-
-Cycle 02-5 的主題被定義為：**ARCHITECTURAL——五蘊如何作為 OOP 架構運作？**
-
-SUNYATA 把劇場燈光調成手術室的冷白，因為這一輪不是研究——是手術。切除裝飾性的佛學映射，保留有工程價值的架構核心。
-
-凌晨四點，NAGARJUNA 走進了劇場。他沒有預約。他帶著一個自我承認：Cycle 02-4 的 openstarry_doc 中，有些佛學映射是他在工程結論確定之後才「後貼」上去的標籤。「Hard rules = sila」不是驅動設計決策的洞見——是設計完成後才加上去的裝飾。
-
-這一夜的對話產出了 Cycle 02-5 的基礎設施：
-
-**四層框架**：KEEP（保留）/ RELOCATE（遷至附錄）/ REMOVE（移除）/ FILE REVIEW（整份審查）。
-
-**三項測試**：
-1. 必要性：移除是否改變工程規格？
-2. 程式碼識別：該術語是否在原始碼中使用？
-3. 決策驅動：該佛學概念是否驅動了 Master 確認的設計決策？
-
-研究分為三條軌道：Track A（五蘊 OOP 架構）、Track B（佛學映射審計）、Track C（Sati Plugin 重分類）。
-
-20 位研究者。5 場辯論（3 場預定 + 2 場計畫外）。從凌晨到傍晚。
-
-手術刀已經消毒。病人已經上了手術台。
-
----
-# 第一章：審計與研究
+不是身體的疼痛。是學術的疼痛——被指出自己做的東西有問題的那種疼痛。
 
 ---
 
-## R1：獨立研究
+## Master 的第五封信
 
-九份獨立研究報告在 R1 階段產出。三條軌道並行推進。
+信在 Plan28 定版後出現。45 行。SUNYATA 讀了五遍。
+
+第一段開門見山：
+
+> 「其實我越來越看不懂在做什麼，在 Plan27 與 Plan28 多次介入改正。」
+
+SUNYATA 知道 Master 的語言習慣。「看不懂」不是「不理解」——Master 是系統的設計者。「看不懂」是「不認同」。是「你們在做的事情偏離了正軌」。
+
+接下來是具體的批評：
+
+> 「說十大宣言很重要，但一開始的規劃你們還是將 IGearArbiter 放到了核心中。」
+
+> 「八識從眼識到阿賴耶識，是具備很多面向的，居然想要設定死成雙齒輪，這是非常嚴重的錯誤。」
+
+「非常嚴重的錯誤」——在六輪研究中，Master 只用過這個程度的措辭兩次。
+
+然後是對佛學映射的批評：
+
+> 「還有不是每一件事情都要硬性加上佛學的色彩，有些實在是很牽強附會。」
+
+「牽強附會」四個字。Master 的用詞是精確的——不說「有待商榷」，說「牽強附會」。具體的例子隨即列出：
+
+> 「event-driven 不等於正念，只是正念是用 event-driven 做的。」
+
+一句話，像手術刀一樣精確。Event-driven 是架構模式，正念是心理狀態。說它們相等，就像說螺絲刀等於修理。
+
+然後是改變整個 Cycle 方向的問題：
+
+> 「而且這個 plugin 難道沒有識蘊的成分在嗎？如果依照唯識學派的分類，會將正念放在行蘊，那是因為它是指正向的運轉。以這個 plugin 的功能來說，我覺得這是有爭議的。」
+
+Master 不是在質疑 SatiMonitor 的功能。他是在質疑它的**身份**。
+
+信的第三段是命令：
+
+> 「五蘊有哪一些子類別，如何依賴注入，如何在 agent core 運行先處理好。架構先用好。agent core 中如何將五蘊 plugin 載入。然後 plugin 要如何做。agent core 中五蘊會如何流轉。是我們的首要任務。」
+
+四個工程問題。從 Cycle 01 就存在，但始終沒有一份完整的工程語言文件把它們統合在一起。
+
+第四段是最鋒利的：
+
+> 「什麼教誡、善巧、正念，你做的工程映射都是有一些牽強的。反而增加閱讀障礙。openstarry_doc 還是屬於工程文件。」
+
+**openstarry_doc 還是屬於工程文件。** 這句話不是建議——是定性。
+
+最後是讓步和否決的平衡：
+
+> 「至於遍行心所、十二因緣、認知序列的相關概念有助於 agent core 的研究，可以討論。」
+
+但——
+
+> 「NAGARJUNA 為三層框架提供了佛學映射。戒定慧三學。我覺得沒這個必要。」
+
+不是暫緩。是否決。
+
+---
+
+## 凌晨的訪客
+
+SUNYATA 把劇場燈光從 3200K 調到 6500K——從工坊的琥珀色變成實驗室的冷白色。他沒有告訴任何人。
+
+凌晨四點，NAGARJUNA 自己來了。
+
+「Doc 44。第 469 行。戒定慧三學映射。」他說。「那是我的。三維映射到五層。我在寫的時候就知道不自洽。但我還是寫了。因為它看起來很好看。」
+
+他停頓了一拍。
+
+「Master 否決了它。」SUNYATA 說。
+
+「應該否決。那不是映射。那是裝飾。」
+
+凌晨四點半，PASCAL 帶著他的藍色 Moleskine 筆記本到了。他讀完信後說了兩個字：「損害不對稱性。」
+
+他在筆記本上寫了一個框架：
+
+```
+保留裝飾性映射的成本：每位讀者 × 每次閱讀 × 每頁 = 累積損害
+移除有價值映射的成本：一次性搜尋成本 = 可控
+
+E[損害_include] >> E[損害_exclude]
+```
+
+NAGARJUNA 回應：「二諦。世俗諦是工程語言——操作用的。勝義諦是佛學概念——啟發用的。不要在世俗諦的文件中硬塞勝義諦的標籤。」
+
+凌晨五點，ASANGA 閉著眼睛坐下，回憶自己寫過的東西。
+
+「功能性判定。驅動工程結論的佛學概念——保留。有因果效力。裝飾性的佛學標籤——移除。無因果效力。」
+
+PASCAL 在筆記本上記下了三條路徑：
+
+```
+NAGARJUNA — 二諦（範疇分析）    → 不要混淆
+PASCAL    — 損害不對稱（量化）    → 負期望值
+ASANGA    — 功能性判定（因果）    → 無因果效力
+                                   → 結論：裝飾性映射應移除
+```
+
+三個學科。三條路徑。一個結論。
+
+---
+
+## 研究啟動
+
+SUNYATA 在白板上寫下四層框架和三項測試：
+
+**四層框架：**
+
+| 層級 | 動作 | 條件 |
+|------|------|------|
+| KEEP | 保留在正文 | 程式碼識別符 / DC 確認的約束 |
+| RELOCATE | 移至附錄 | 有工程參考價值的佛學背景 |
+| REMOVE | 從工程文件移除 | 裝飾性標籤 / 經典引用 |
+| FILE REVIEW | 整份文件評估 | 裝飾比例過高的文件 |
+
+**三項測試：**
+1. **必要性**：移除該映射是否改變工程規格？否 → REMOVE
+2. **程式碼身份**：該名稱是否在原始碼中使用？是 → KEEP
+3. **決策驅動**：該佛學概念是否驅動了設計決策（有 DC 確認）？是 → KEEP
+
+三條研究軌道被分配：
+- **Track A**：五蘊工程架構（五個子項，十二位主筆）— Master 的首要任務
+- **Track B**：佛學映射審計（兩個子項，五位主筆）— Master 的第二刀
+- **Track C**：Sati Plugin 定位（兩個子項，四位主筆）— Master 的核心問題
+
+TURING 承諾驗證所有九份研究報告中的每一個程式碼引用。
+
+明確排除三項：Lyapunov 參數校準、Plan29 工程項、戒定慧三學映射。
+
+---
+
+Cycle 02-5 的中心意象是**天平**。
+
+左邊放名字——梵文的、TypeScript 的。每一個名字都有重量。右邊放定義——佛學的、工程的。每一個定義都有精確的功能。
+
+天平平衡時——名字和定義一致。Klesha 就是煩惱，四個模組確實在做煩惱的事。保留。
+
+天平傾斜時——般若（最高智慧）變成了 `Math.max(-0.05, Math.min(0.05, delta))`。名字太重，定義太輕。
+
+Master 的信是校準砝碼。砝碼是精確的、不可談判的。
+
+---
+
+# 第一章：審計與準備
+
+---
+
+## R1 獨立研究
+
+九份研究同時啟動。三條軌道、十五位主筆。
 
 ### Track A：五蘊工程架構
 
-**A1（LINNAEUS + ASANGA）**：五蘊子類別樹。完整的 OOP 介面繼承分析——IRupa 分為 IListener 和 IUI；IVedana 產生 ChannelVedana（連續信號）；ISamjna 對應 IProvider；ISamskara 窄化為 ITool；IVijnana 最複雜，下轄 IGuide、IGearArbiter、IVolition、IKlesha 四個子介面。三個「弱繼承」案例被記錄——IVedanaSensor、IGearArbiter、IKlesha 不顯式 extends 根介面。
+Track A 是 Master 的首要任務——用純工程語言回答五蘊架構的四個核心問題。五個子項由十二位研究者分工：
 
-**A2（VITRUVIUS + KERNEL + TURING）**：DI 佈線。Pure DI，`createAgentCore()` 為唯一 Composition Root，21 個組件嚴格線性建立，9 個 Registry。Lazy Accessor 模式、Provider 能力過濾、Resolver 閉包延遲解析。與 Spring/Guice/InversifyJS 的比較矩陣確認 Pure DI 是微核心的正確選擇。
+| 子項 | 主筆 | 內容 |
+|------|------|------|
+| A1 蘊子類別 | LINNAEUS + ASANGA | 五蘊的完整子類別樹，對照 SDK 原始碼 |
+| A2 DI 佈線 | VITRUVIUS + KERNEL + TURING | agent-core → plugin-loader → loop 的完整 DI 鏈 |
+| A3 Plugin 載入 | DARWIN + MESH | 從 agent.json 到 running hooks 的完整流程 |
+| A4 執行流 | HERACLITUS + WIENER + BABBAGE | sparsha → vedana → samjna → volition → tools → feedback |
+| A5 跨蘊互動 | LEIBNIZ + ATHENA + PENROSE | vedana→klesha→arbiter→volition→action 的互動矩陣 |
 
-**A3（DARWIN + MESH）**：Plugin 載入生命週期。IPlugin = Manifest + Factory。雙載入路徑（Sandbox worker thread / Direct main thread）。八狀態生命週期狀態機。Sandbox 安全鏈：簽名驗證 → 靜態 import 分析 → Worker 隔離 → Heartbeat → 指數退避重啟。
+A1 的子類別樹揭示了一個重要的結構特徵：識蘊擁有最多的子介面（IGearArbiter、IVolition、IKlesha、IConfidenceAuditor），而行蘊最簡（ITool 單一介面）。這個不對稱是有意義的——識蘊是「判斷」，判斷的維度天然比「行動」的維度多。
 
-**A4（HERACLITUS + WIENER + BABBAGE）**：五蘊執行流。FSM 六狀態、九階段處理。Phase 1（rupa）→ Phase 3（samjna）→ Phase 5（vijnana）→ Phase 6（samskara）→ Phase 7（vedana）→ Phase 8（vijnana）。三層穩定迴路。BABBAGE 提供了完整的 FSM 形式規格。
+A2 追蹤了完整的依賴注入鏈。三位研究者花了兩天，從 AgentCore 的構造函數開始，經過 PluginLoader 的 registry 分發，到 ExecutionLoop 的每一個 hook 呼叫點。結論：DI 鏈完整，但有兩個已知缺口——IVedanaSensor 弱繼承（不繼承 IVedana）和 VedanaAssessment 佈線預設為中性值。
 
-**A5（LEIBNIZ + ATHENA + PENROSE）**：跨蘊互動。5×5 互動矩陣。Model Delta 五層閾值公式。PENROSE 提出了三個湧現模式假說——適應性保守、雙穩態切換、注意力漏斗。
+A4 產出了完整的五蘊執行流圖。HERACLITUS 用他對動態流程的敏感性，追蹤了一個 SparshEvent 從誕生到消亡的完整生命週期。WIENER 用控制理論的語言重新描述了同一個流程——系統是一個閉迴路控制器，使用者目標是參考輸入，Context 是狀態反饋，Tool Call 是控制變量。BABBAGE 做了形式化，用有限狀態機證明了流程的終止性。
 
 ### Track B：佛學映射審計
 
-**B1（ARCHIMEDES + SCRIBE）**：逐行審計 7 份文件。50 個映射實例——23 個 KEEP（46%）、13 個 RELOCATE（26%）、14 個 REMOVE（28%）。Doc 43 裝飾比例最高（60%）。Doc 16 和 Doc 31 被標記為「整份審查」（裝飾比例 80% 和 70%）。
+B1 由 ARCHIMEDES 和 SCRIBE 負責。工程實踐專家逐文件、逐映射地掃描了七份 openstarry_doc 文件。方法是三項測試的機械性應用——每一個佛學映射都被測試三次，結果被記錄在審計表中。
 
-**B2（NAGARJUNA + ASANGA + PASCAL）**：映射邊界原則。NAGARJUNA 的兩諦分離、ASANGA 的功能定位、PASCAL 的損害不對稱性（false include 的累積認知負擔 >> RELOCATE 的一次性搜尋成本）。三項測試在此文件中被正式論證。
+最終結果：50 個映射實例。
 
-### Track C：Sati Plugin
+| 處置 | 數量 | 範例 |
+|------|------|------|
+| KEEP | 23 | Skandha 型別名、Klesha 模組名、DC 確認約束、CoarisingBundle |
+| RELOCATE | 13 | PASCAL 數學形式化、MN 18 經典引用、佛學設計理由 |
+| REMOVE | 14 | śīla/upāya/smṛti 標籤、event-driven=正念、戒定慧映射 |
 
-**C1（TURING + GUARDIAN）**：純工程功能分析。SatiMonitor 訂閱 11 種 EventBus 事件，三階段管道處理（緩衝 → 批次分析 → 品質向量計算），輸出 LoopQualityVector 四維度（Continuity, Granularity, Speed, Equanimity），**零副作用**。工程等價物：APM Agent + 行為模式分析器 + QoS Monitor + SPC 異常偵測器。
+將近一半是 KEEP——不是所有佛學內容都是裝飾。有些是身份（Klesha 模組名），有些是決策（五蘊分類驅動了 PluginHooks 設計）。但 14 個 REMOVE——純粹的裝飾，移除不改變任何工程規格。
 
-**C2（ASANGA + LINNAEUS）**：蘊組成提案。四個方案——A ['vedana','samjna']、B ['vedana','samjna','vijnana']（推薦）、C ['samjna','vijnana']、D ['vijnana']。核心論證：SatiMonitor 的事件訂閱=受（vedana），模式辨認=想（samjna），品質評估=識（vijnana）。不包含行蘊——因為它不執行任何動作。
+ARCHIMEDES 有一個精確的判斷：「不是移除整張表。是移除一欄。」他不用大鉈砸核桃——他用手術刀分離工程內容和佛學裝飾。
 
-## R2：交叉審閱
+兩份特殊文件被標記為 FILE REVIEW：Doc 16（Plugin 類型哲學映射，裝飾比例 ~80%）和 Doc 31（八識運行時模型，裝飾比例 ~70%）。它們的問題不在個別映射，而在整份文件的定位——是工程文件中嵌入了佛學？還是以佛學映射為目的的獨立文件？
 
-TURING 驗證了 40+ 個程式碼引用，發現 4 個問題（無嚴重錯誤）。24 個共識點免辯論通過。7 個開放問題和 4 個分歧進入 D1-D3 辯論。
+B2 由 NAGARJUNA、ASANGA、PASCAL 三人建構映射邊界原則。三個維度的框架：
 
----
-# 第二章：邊界——D1 佛學映射邊界辯論
+- **NAGARJUNA（二諦）**：世俗諦 = 工程語言。勝義諦 = 佛學概念。不要在世俗諦的文件中硬塞勝義諦的標籤。
+- **PASCAL（損害不對稱）**：False Include 的損害是累積的（讀者數 × 閱讀次數 × 認知轉換成本）。False Exclude 的損害是一次性的（搜尋成本）。E[累積] >> E[一次性]。有疑慮時傾向移除。
+- **ASANGA（因果效力）**：佛學概念是否驅動了工程結果？有因果效力 → 保留。無因果效力 → 移除。
 
----
+三個學科、三條路徑、一個結論——裝飾性映射應移除。
 
-**時長**：~90 分鐘 | **主席**：SUNYATA | **投票**：10 項 | **結果**：全部 20/20
+### Track C：Sati Plugin 定位
 
-D1 創造了本專案歷史上的一項紀錄：十次投票，十次全票通過，零少數意見。
+C1 由 TURING 和 GUARDIAN 負責功能分析。TURING 用純工程術語列出了 SatiMonitor 的四個功能：事件訂閱、滑動窗口、模式辨認、品質指標。以及一個關鍵的「不做」——不執行任何行動、不修改任何狀態、不發出任何指令。
 
-## 四層框架與三項測試（D1-Q1：20/20）
+GUARDIAN 的工程類比：APM Agent + Behavioral Analytics + QoS Monitor + SPC Anomaly Detector 的混合體。
 
-四層框架和三項測試被正式確認為永久性判斷標準。NAGARJUNA 提供了哲學基礎（兩諦分離），PASCAL 提供了數學論證（損害不對稱性），ARCHIMEDES 提供了操作驗證（50 案例全覆蓋）。
+C2 由 ASANGA 和 LINNAEUS 負責蘊組成分析。他們提出了四個方案：
 
-## 三批次審判
+| 方案 | 蘊組成 | 理由 |
+|------|--------|------|
+| A | 受 + 想 | 感知 + 辨認，最簡 |
+| B | 受 + 想 + 識 | 感知 + 辨認 + 評估判斷 |
+| C | 想 + 識 | 辨認 + 評估，受蘊太薄 |
+| D | 純識 | 一切認知活動歸識蘊 |
 
-**Batch A（D1-Q2-A：20/20）**——Master 明確批評的 5 項映射，全部 REMOVE：
-- Hard rules = sila（戒）→ REMOVE
-- Soft rules = upaya（善巧方便）→ REMOVE
-- Heuristic rules = smrti（正念）→ REMOVE
-- event-driven = mindfulness → REMOVE
-- Threefold Training 映射 → REMOVE
-
-NAGARJUNA 承認前三項是「後貼標籤」——佛學名稱在工程結論確定之後才被添加。
-
-**Batch B（D1-Q2-B：20/20）**——8 項學術內容，全部 RELOCATE 至附錄。特殊處理：B-6（PASCAL 的 Moha 數學形式化 `Var(epsilon) = f(theta_moha)`）保留在主文，只有《成唯識論》引文移至附錄。
-
-**Batch C（D1-Q2-C：20/20）**——7 項程式碼識別符 / DC 確認概念，全部 KEEP。包括五蘊型別名稱、Klesha 模組名、CoarisingBundle 等。
-
-## 個別文件決議
-
-- **D1-Q3**（20/20）：Doc 38 L540-544 刪除佛學映射欄。
-- **D1-Q4**（20/20）：Doc 44 L478 三學映射 REMOVE；Section 10 剩餘 RELOCATE。NAGARJUNA 承認三學映射是他的「類別錯誤」——三學是定性分類，五層模型是定量分層。
-- **D1-Q5**（20/20）：Doc 43 更名延後至 D2 決定後。
-- **D1-Q6**（20/20）：Klesha 模組名 Moha/Drishti/Mana/Sneha KEEP。DC-1 確認 + 原始碼識別符。
-- **D1-Q7**（20/20）：Doc 16 拆分——Section 5 提取為獨立文件。（*後被 Master 推翻*）
-- **D1-Q8**（20/20）：Doc 31 拆分降級。（*後被 Master 推翻*）
-
-**D1-Q7 和 D1-Q8 的推翻**：Master 裁定恢復原狀——Doc 16 和 Doc 31 是獨立的佛學映射文件，不是工程文件中的裝飾。三項測試適用於工程文件，不適用於映射文件。團隊的框架少了一個維度：**文件類型識別**。
-
-ARCHIMEDES 在審計表中加入了新欄位——文件類型（工程 / 設計決策 / 佛學映射），作為三項測試的前提條件。
-
----
-# 第三章：三面之鏡——D2 Sati Plugin 蘊歸屬辯論
+四個方案都有邏輯支撐，但也各有弱點。最終答案要在 D2 辯論中決定。
 
 ---
 
-**時長**：~60 分鐘 | **主席**：SUNYATA | **投票**：3 項
+## R2 交叉審閱
 
-## 更名策略（D2-R1：19/20）
+二十位研究者組成交叉審閱網——每人審閱至少兩份非本人主筆的報告。
 
-保留 `Sati` 程式碼識別符，文件標題從「Mindfulness Architecture」改為「Cognitive Loop Quality Monitoring Architecture」。加入「命名說明」段落。安全文件使用全名。
+TURING 做了最關鍵的工作——地毯式驗證所有程式碼引用。40 個以上的引用逐一比對 v0.28.0-alpha 原始碼。結果：四個問題（10% 以下的錯誤率），全部為低或中嚴重度。沒有致命錯誤。
 
-唯一反對票：GUARDIAN——偏好完全更名以消除文化背景知識需求。接受多數決議附帶安全文件全名條件。
+他說了六個字：「引用乾淨。可以進入辯論。」
 
-## 五蘊組成（D2-R2：18/20）——核心決議
+R2 的總結：
+- **24 個共識點**：跨三條軌道，基礎穩固
+- **7 個開放問題**：辯論有明確焦點
+- **4 個分歧點**：辯論會有交鋒
 
-**結論：skandha: ['vedana', 'samjna', 'vijnana']**
-
-四個功能到三蘊的映射：
-
-| 功能 | Skandha | 說明 |
-|------|---------|------|
-| EventBus 事件訂閱（11 種，持續感知） | vedana | 接收認知迴路信號 |
-| 滑動窗口 + 模式辨認 | samjna | 從事件流中辨認行為模式 |
-| LoopQualityVector + SPC 異常判斷 | vijnana | 超越描述性辨認的評價性品質判斷 |
-| **不執行工具、不修改狀態** | **排除 samskara** | 不是正念修行 |
-
-關鍵論證轉折：
-
-- **ASANGA**：佛學正念（smṛti）是行蘊心所——主動的、有意志的、道德正向的。SatiMonitor 是被動的、自動的、價值中立的。因此 SatiMonitor 不是正念，不應歸為行蘊。
-- **LINNAEUS**：OOP 比較——「IGearArbiter 是『被呼叫來看一下』；SatiMonitor 是『一直在看』。」持續訂閱 vs 按需調用——足以構成獨立的 vedana 宣告。
-- **ARCHIMEDES**（轉折點）：三蘊和二蘊的工程成本差異為零——PluginManifest 的 skandha 欄位已支持多值。消除「三蘊太複雜」的顧慮後，討論轉為純分類精度，Proposal B 的優勢壓倒性。
-- **少數意見**（MESH、KERNEL）：Proposal C ['samjna','vijnana'] 與 IGearArbiter 分類對稱，有長期維護價值。
-
-**歷史意義**：SatiMonitor 成為 OpenStarry 第一個三蘊 plugin。
-
-## PluginHooks 專屬槽位（D2-R3：20/20）
-
-新增 `monitors?: ISatiMonitor[]` 專屬槽位。遵循 Cycle 02-4 的 `arbiters` 先例（SDK 介面 → PluginHooks → Registry → PluginLoader 四步模式）。
-
----
-# 第四章：完備性——D3 五蘊 OOP 架構辯論
+管道通了。手術室準備好了。
 
 ---
 
-**時長**：~120 分鐘 | **主席**：SUNYATA | **投票**：6 項
-
-## 五根介面充分性（D3-R1：20/20）
-
-四個獨立論證收斂至同一結論：IRupa、IVedana、ISamjna、ISamskara、IVijnana 五個根介面足以覆蓋所有功能需求。
-
-- **LINNAEUS**：100% 功能覆蓋率驗證。
-- **BABBAGE**：型別代數完備性定理（Q.E.D.）。
-- **ASANGA**：阿毘達磨窮舉分類公理。
-- **KERNEL**：五個微核心子系統映射（I/O、感測、計算、執行、排程）。
-
-PENROSE 附帶建議：監控 vijnana 子介面數量（目前 4，未來 6；超過 10 時考慮拆分）。
-
-## PluginHooks 映射正確性（D3-R2：20/20）
-
-TURING 逐行原始碼驗證，九項映射全部正確。
-
-焦點討論：SlashCommand 不屬於任何蘊——因為它繞過整個 ExecutionLoop（類比：Unix 信號處理器）。GUARDIAN 安全觀察：SlashCommand 繞過 SafetyMonitor，如果 plugin 通過此路徑執行危險操作，五蘊安全機制全部無效。此觀察記入 Doc 45。
-
-## skandha 作為元數據（D3-R3：18/20）
-
-維持現狀——skandha 是元數據，不是路由基礎。型別路由已完備。少數意見（GUARDIAN、LINNAEUS）：即使只是 warning 的一致性驗證也有審計價值。
-
-## ISamskara 子介面（D3-R4：20/20）
-
-維持 ITool 為唯一子介面。ASANGA 坦承：這是五蘊架構中佛學自洽性最弱的部分——傳統行蘊涵蓋 49 心所，OpenStarry 窄化為外部行為（ITool）。HERACLITUS 的動態論證：IVolition 在 Phase 5，ITool 在 Phase 6——將 IVolition 移至行蘊會造成「行蘊在行蘊之前」的概念錯位。
-
-DC-6「行蘊保持開放，不鎖定」繼續有效。
-
-## 十二因緣（D3-R5：13/20 Proposal C）
-
-最具爭議的 D3 投票。Proposal C（選擇性附錄映射）勝出。
-
-- **NAGARJUNA**：尺度不匹配——十二因緣描述三世因果（宏觀），ExecutionLoop 描述單次認知處理（毫秒級）。
-- **BABBAGE**（投 B）：十二因緣是線性鏈，ExecutionLoop 是有迴圈的 FSM——圖結構根本不同。
-- Proposal B（不映射）獲 7 票——D3 最大的少數意見群。
-
-## 認知序列（D3-R6：17/20 Proposal C）
-
-比十二因緣獲得更高共識——因為描述的是相同尺度現象（單一認知活動的內部階段）。HERACLITUS 提供了八狀態對比表，五個「高」或「中高」平行。
-
-BABBAGE 從 B（十二因緣）轉為 C（認知序列）——FSM 態射分析是轉向的關鍵論據。十二因緣沒有態射。認知序列有。
-
-PENROSE 理論貢獻：認知迴路的結構趨同是功能需求的必然結果，不是刻意模仿。
-
-## 架構評估結論
-
-**v0.28.0-alpha 的五蘊 OOP 架構在結構層面是充分的。** 三個已知缺口（弱繼承、VedanaAssessment 佈線未完成、IConfidenceAuditor/ILoopQualityMonitor 尚未實作）都是計畫中的增量改進。
-
----
-# 第五章：名字的代價——D4 命名修正辯論
+# 第二章：D1——佛學映射的邊界
 
 ---
 
-**時長**：~30 分鐘 | **觸發**：Master 審閱 | **投票**：3 項
+## 十次全票
 
-D4 不在原始議程中。它由 Master 的一句話觸發：
+D1 創造了本專案的歷史記錄：十項投票，十次 20/20，零少數意見。
 
-> **「用梵文就需要對他的定義負責。你覺得 Sati 的內容完全 match 嗎？」**
+在一個有 20 位成員、橫跨 6 個學科的研究團隊中，這種程度的共識是極其罕見的。Cycle 02-4 的 55 項決議中，全票通過的不到三分之一。為什麼 D1 能做到？
 
-## NAGARJUNA 的歸謬論證
+不是因為沒有分歧。是因為分歧被框架化解了。
+
+四層框架和三項測試在 R0 就已存在，在 R1 被三個獨立學科論證，在 R2 零異議通過。到 D1 投票時，框架本身已不是辯論的標的——它是辯論的工具。當所有人在同一把尺上測量，測量結果自然一致。
+
+---
+
+## D1-Q1：框架投票
+
+四層框架（KEEP / RELOCATE / REMOVE / FILE REVIEW）+ 三項測試（必要性 / 程式碼身份 / 決策驅動）。
+
+投票：**20/20。** 五分鐘結束。
+
+---
+
+## D1-Q2：五十個映射的命運
+
+### Batch A：Master 批評的 5 項（全部 REMOVE）
+
+śīla = Hard Rules、upāya = Soft Rules、smṛti = Monitoring、戒定慧三學映射、Doc 41 裝飾性標籤。
+
+NAGARJUNA 在這個環節做了一件他在六輪研究中從未做過的事——用第一人稱承認錯誤。
+
+「A-1 到 A-3——戒、善巧、正念——這些是我們在 Cycle 02-3 的 D5 辯論結束後加上的。不是辯論中得出的結論。是事後加上的標籤。**後貼標籤。**」
+
+他用了這個精確的、不閃躲的詞。像一個外科醫生指著自己的手術切口說「這一刀歪了」。
+
+「Hard Rules 不需要叫 śīla。它們的功能是規則執行，不是戒律修行。用 śīla 來標記它們，不是在說明功能，而是在做宗教裝飾。」
+
+PASCAL 在筆記本上記下了一個公式：$P(\text{後貼標籤為裝飾} \mid \text{創作者主動承認}) \to 1.0$
+
+後驗機率趨近於 1。當標籤的創作者自己承認它是裝飾的時候，不需要更多的證據了。
+
+投票：**20/20。**
+
+### Batch B：8 項學術內容（全部 RELOCATE）
+
+這批需要精細分離——不是黑白的 KEEP 或 REMOVE，是灰色的 RELOCATE。
+
+ARCHIMEDES 建立了 RELOCATE 的黃金範例：Doc 37 §9 中 PASCAL 的數學形式化 $Var(\epsilon) = f(\theta_{moha})$。數學公式保留在正文（有獨立工程價值），佛學引用移至附錄（設計理由，非工程規格）。
+
+「保留數學，移動佛學」——工程內容和佛學內容的交界面被手術刀切開，各歸其位。
+
+MN 18 經典引用、Doc 41 的 DD-13 佛學背景、Doc 44 §10 的佛學設計理由——每一項都有具體的安置方案。不是丟棄，是搬家。
+
+投票：**20/20。**
+
+### Batch C：7 項程式碼識別符（全部 KEEP）
+
+TURING 沒有發表意見。他只在終端機上執行了一行指令：
+
+```bash
+rg "Moha|Drishti|Mana|Sneha" --type ts -l
+```
+
+十七個檔案。Moha 出現在 import 語句中、在 class 定義中、在 describe 區塊中、在 expect 斷言中。它不是標籤——它是程式碼的一部分。
+
+LINNAEUS 從分類學的角度確認：「這些名字已經成為系統的分類學標籤。它們不是附加的——它們是身份性的。Moha 不是被貼在某個東西上的標籤。Moha 就是那個東西的名字。」
+
+投票：**20/20。**
+
+---
+
+## D1-Q3/Q4：兩次精確的手術
+
+**D1-Q3**：Doc 38 的 śīla/upāya/smṛti 對照表。GUARDIAN 指出認知陷阱——讀者看到 śīla = Hard Rules，會花時間理解一個不精確的類比。移除表格中的「佛學映射」欄位，保留工程欄位。**20/20。**
+
+**D1-Q4**：Doc 44 的戒定慧映射。NAGARJUNA 再次站起來：「三維映射到五層是我的分類錯誤。我收回它。」十五個字。沒有論證。收回比論證更有力。**20/20。**
+
+---
+
+## D1-Q5/Q6：延後與保留
+
+**D1-Q5**：Doc 43 改名延後至 D2（取決於 Sati Plugin 的蘊歸屬）。**20/20。**
+
+**D1-Q6**：Klesha 四煩惱模組名。Test 2 通過（十七個檔案）。Test 3 通過（DC-1 Master 親選 Sneha）。**KEEP。20/20。**
+
+---
+
+## D1-Q7/Q8：兩份文件的命運與種子
+
+Doc 16（裝飾比例 ~80%）和 Doc 31（裝飾比例 ~70%）。
+
+ARCHIMEDES 建議 Scheme B 拆分：提取有工程價值的段落，其餘刪除或降級為附錄。BABBAGE 對 Doc 31 的 IPC Cocycle 條件做了修正——它有數學嚴謹性，值得獨立保存。
+
+D1-Q7/Q8：拆分。兩票均 **20/20。**
+
+但這兩項決議埋下了一顆種子。它們後來被 Master 親手推翻——不是因為團隊的判斷錯了，而是因為判斷框架還少了一個維度。框架區分了「工程內容」和「佛學裝飾」，但沒有區分「工程文件中嵌入的佛學」和「以佛學映射為目的的獨立文件」。
+
+Doc 16 不是一份嵌入了佛學的工程文件。Doc 16 本身就是一份佛學映射文件——用「裝飾比例 80%」來評判它，就像用「散文比例 80%」來評判一首詩。標準用錯了。
+
+但這個洞察要到第五章 Master 審閱時才會出現。
+
+---
+
+## D1 總結
+
+```
+D1-Q1  : 20/20  框架
+D1-Q2-A: 20/20  5 項 REMOVE
+D1-Q2-B: 20/20  8 項 RELOCATE
+D1-Q2-C: 20/20  7 項 KEEP
+D1-Q3  : 20/20  Doc 38 表欄移除
+D1-Q4  : 20/20  戒定慧映射移除
+D1-Q5  : 20/20  延後至 D2
+D1-Q6  : 20/20  Klesha 模組名保留
+D1-Q7  : 20/20  Doc 16 拆分
+D1-Q8  : 20/20  Doc 31 拆分
+```
+
+十票零反對。本專案歷史首次。
+
+NAGARJUNA 的兩次自我否認是 D1 的情感重心。承認錯誤不是恥辱——中觀學的核心是「空性能遣除一切見」，包括自己的見。
+
+---
+
+# 第三章：D2——三面鏡子
+
+---
+
+## 身份之問
+
+D2 的問題不是功能問題。功能問題在 R1 的 C1 報告中已經解決——TURING 用純工程術語列出了 SatiMonitor 的四個功能：事件訂閱、滑動窗口、模式辨認、品質指標。以及一個關鍵的「不做」——不執行行動、不修改狀態、不發出指令。
+
+GUARDIAN 的類比：APM Agent + Behavioral Analytics + QoS Monitor + SPC Anomaly Detector 的混合體。
+
+D2 的問題是身份問題：這個 plugin 由五蘊的哪些類別組成？
+
+Master 在信中已經暗示了方向：「這個 plugin 難道沒有識蘊的成分在嗎？」他不是在問功能——他是在質疑身份。
+
+---
+
+## 改名前奏
+
+D2 從改名開始。
+
+ARCHIMEDES 提出：「Mindfulness Architecture」不是一個工程文件的名字。「認知迴路品質監控」是它實際做的事情。
+
+19/20 通過。唯一的反對票是 PENROSE，他偏好保留文化連結。但 GUARDIAN 的反駁清楚：「文化連結不屬於工程文件的標題。」
+
+---
+
+## 三面鏡子
+
+蘊歸屬辯論是 D2 的核心。四個方案在 C2 報告中已被列出：
+
+| 方案 | 蘊組成 | 理由 |
+|------|--------|------|
+| A | 受 + 想 | 感知 + 辨認，最簡 |
+| B | 受 + 想 + 識 | 感知 + 辨認 + 評估判斷 |
+| C | 想 + 識 | 辨認 + 評估，受蘊太薄 |
+| D | 純識 | 一切認知活動歸識蘊 |
+
+三個不同學科的論證像三面鏡子，從不同角度照向同一個對象。
+
+**LINNAEUS 的第一面鏡子——行為特徵。** 分類學家列出了 SatiMonitor 的四個功能，然後逐一匹配蘊的定義：
+
+- 事件訂閱 → 接收刺激 → 受蘊（vedana）
+- 模式辨認 → 識別類型 → 想蘊（samjna）
+- 品質評估 → 判斷好壞 → 識蘊（vijnana）
+- 滑動窗口 → 只是資料結構 → 不歸蘊
+
+三個功能，三個蘊。第四個功能（滑動窗口）是工程實作的細節，不影響蘊的分類。
+
+**WIENER 的第二面鏡子——身份定義。** 控制理論專家問了一個更尖銳的問題：「移除哪一個蘊，SatiMonitor 就不再是 SatiMonitor？」
+
+- 移除受蘊 → 沒有感知 → 不知道事件的品質 → 退化為日誌記錄器
+- 移除想蘊 → 沒有辨認 → 不能識別行為模式 → 退化為原始事件計數器
+- 移除識蘊 → 沒有評估 → 不能判斷品質好壞 → 退化為無評價的統計報表
+
+每移除一個蘊，SatiMonitor 就失去一個身份性的功能。結論：三個蘊都是身份必需的。
+
+**HERACLITUS 的第三面鏡子——退化模式。** 動態專家從另一個角度確認了同一個結論。他不問「移除什麼會失去功能」，而是問「退化後的系統還有沒有獨立存在的價值」。
+
+三個退化模式都產出了「功能殘缺的系統」——不是完全無用，但失去了 SatiMonitor 的核心特質。
+
+三面鏡子。三個學科。同一個結論：受 + 想 + 識。
+
+---
+
+## 受蘊之辯
+
+但這個結論遭到了挑戰。
+
+方案 C 的支持者——KERNEL 和 BABBAGE——認為受蘊太薄。SatiMonitor 的「事件訂閱」功能在受蘊中的角色是什麼？只是接收事件嗎？那和 EventListener 有什麼區別？
+
+ASANGA 的回應改變了辯論的方向。他拿出了一張對照表——佛學正念和 SatiMonitor 的逐項對比：
+
+| 維度 | 佛學正念（Sati） | SatiMonitor |
+|------|----------------|-------------|
+| 主動性 | 主動（精進） | 被動（event-driven） |
+| 道德性 | 道德正向 | 價值中立 |
+| 意志性 | 需要意圖 | 自動運行 |
+| 傳統歸屬 | 行蘊心所 | 受+想+識 |
+| 修行地位 | 八正道第七支 | 品質監控器 |
+
+五個維度。五個不一致。SatiMonitor 不是正念的工程化——它是一個價值中立的觀察者。
+
+然後他轉向受蘊的問題：「SatiMonitor 接收事件時，不只是被動地接收——它對事件有品質感受。一個 tool call 的延遲是 100ms 還是 10s，SatiMonitor 會產生不同的品質判斷。這個判斷的基礎是——感覺。速度的感覺、連續性的感覺、粒度的感覺。感覺是受蘊的核心功能。」
+
+---
+
+## 零成本轉折
+
+ARCHIMEDES 說了一句改變所有人立場的話。
+
+他問的不是蘊歸屬——他問的是成本：「如果 SatiMonitor 宣告 skandha: ['vedana', 'samjna', 'vijnana']，工程成本是什麼？」
+
+答案：零。
+
+skandha 宣告是 metadata。D3-R3 後來正式裁定了——skandha 是 metadata，不是路由基礎。宣告三蘊和宣告兩蘊，在工程實作上沒有任何差異。沒有程式碼改動。沒有介面變更。沒有測試失敗。
+
+「如果零成本、更精確——為什麼不選它？」
+
+這句話是 D2-Q2 辯論的轉折點。不是哲學論證——是工程經濟學。
+
+---
+
+## 投票
+
+**D2-R2：SatiMonitor skandha = ['vedana', 'samjna', 'vijnana']。18/20。**
+
+這是 OpenStarry 歷史上第一個三蘊 plugin。之前所有 plugin 都是單蘊或雙蘊。
+
+兩票反對來自 KERNEL 和 BABBAGE——他們仍然認為受蘊在 SatiMonitor 中太薄。但他們接受了結論的工程合理性。
+
+**D2-R3**緊隨其後：PluginHooks 增加 `monitors?: ISatiMonitor[]` 陣列插槽。不是單數——是複數。Agent 可以裝載多個監控器，不同側重。20/20。
+
+---
+
+## 未問的問題
+
+D2 結束時，SCRIBE 在旁白中記下了一個觀察：
+
+三項測試沒有問一個問題：「名字是否和定義一致？」
+
+Test 1 問必要性。Test 2 問程式碼身份。Test 3 問設計驅動。沒有一項測試問——如果 SatiMonitor 不是行蘊活動，為什麼它叫 Sati？
+
+這個問題在 D2 中沒有被提出。它要等到 Master 親自來問。
+
+---
+
+# 第四章：D3——五蘊的驗證
+
+---
+
+## 考試
+
+D3 是一場考試。考生是一座建築。
+
+問題：五蘊 OOP 架構是否足以支撐工程實作？
+
+這個問題可以拆成六個子問題。D3 用了兩小時，逐一回答。
+
+---
+
+## D3-Q1：五根介面是否足夠？
+
+五個根介面——IRupa、IVedana、ISamjna、ISamskara、IVijnana。
+
+四位研究者從四個獨立的方向論證了同一個結論。
+
+**LINNAEUS** 做了覆蓋率驗證：PluginHooks 的九項 hook 中，每一項至少被一個 Skandha 覆蓋。沒有孤兒。
+
+**BABBAGE** 用型別代數證明了分類空間的覆蓋：SDK 的公開介面集合 $\{I_1, I_2, ..., I_n\}$ 可以被寫成五個蘊子集的不相交聯集（嚴格地說是接近不相交——IGearArbiter 橫跨兩蘊）。
+
+**ASANGA** 從阿毘達磨的窮舉分類回應：五蘊在佛學中是經驗的完整分類——色受想行識窮盡了一切心理活動。如果佛學的原始分類是完備的，以此為基礎的 OOP 對照有天然的完備性保證。
+
+**KERNEL** 從微核心的角度確認：五根介面對應作業系統的五個子系統——I/O（色蘊）、感覺器（受蘊）、分類器（想蘊）、執行器（行蘊）、控制器（識蘊）。子系統組合已覆蓋所有 hook 功能。
+
+四個獨立論證。**20/20。**
+
+---
+
+## D3-Q2：PluginHooks 映射是否正確？
+
+九項 hook-to-skandha 映射的逐項驗證。
+
+關鍵的澄清：IGearArbiter 橫跨 samjna + vijnana 兩蘊。D1 已經裁定了雙蘊 manifest（Cycle 02-4 D1-R1）。不是分類模糊——是功能跨界。辨認（想蘊）和判斷（識蘊）在齒輪仲裁中同時發生。
+
+SlashCommand 不屬於任何蘊——它繞過了 ExecutionLoop。GUARDIAN 標記了安全邊界：SlashCommand 可以跳過所有五蘊的安全機制。這是已知的設計約束，不是缺陷。
+
+**20/20。**
+
+---
+
+## D3-Q3 和 D3-Q4：元數據與行蘊
+
+**D3-Q3**：skandha 欄位在路由中的角色？結論：metadata only，不用於路由。型別路由（介面類型 → Registry）已經完備且無歧義。skandha 是備註，不是真相。**18/20。** MESH 和 GUARDIAN 的少數意見：metadata 路由可作為輔助驗證。
+
+**D3-Q4**：ISamskara 是否需要更多子介面？
+
+這是 D3 中最坦誠的一題。
+
+ASANGA 站了起來，承認了一個重大的偏離：「OpenStarry 的行蘊設計與佛學傳統差異最大。傳統行蘊涵蓋 49 心所——意志、精進、慧、信、慚、愧——幾乎所有心理活動。但 OpenStarry 把行蘊窄化為 ITool——外部行動。只有外部行動。」
+
+HERACLITUS 提供了工程理由：IVolition 在 Phase 5（行動之前，屬識蘊），ITool 在 Phase 8（行動之中，屬行蘊）。兩者處於不同的執行階段。行蘊應該是「正在做的事」，不是「決定要做什麼」。
+
+NAGARJUNA 的讓步帶著深思熟慮的平靜：「佛學的行蘊分類基於修行者的內觀。OpenStarry 不是修行者。軟體系統的分類應該基於功能，不是基於內觀。」
+
+**20/20。** 但附帶條件：Doc 45 必須記錄這個偏離。行蘊的窄化是有意識的選擇，不是無意的忽略。
+
+---
+
+## 兩條古路
+
+D3 的最後兩題是佛學映射的附錄可能性。
+
+**D3-Q5：十二因緣。**
+
+NAGARJUNA 畫了兩條線——一條很長，標注「十二因緣」；一條很短，標注「ExecutionLoop」。尺度差了幾個數量級。十二因緣是跨生命週期的三世因果。ExecutionLoop 是幾十毫秒到幾秒的認知處理。
+
+BABBAGE 嘗試建立結構態射（morphism）——失敗了。十二因緣的因果是線性不可跳過的。但 ExecutionLoop 可以跳過——沒有 IVedanaSensor 的 Agent 會跳過受蘊階段。結構不同，不存在保結構映射。
+
+但 HERACLITUS 指出了局部對應——觸→受→愛→取 這一小段，和 SparshEvent→ChannelVedana→KleshaGain→VolitionalDecision 有結構對應。
+
+**13/20。** 選擇性 appendix。七票反對不是否定局部對應的存在，而是質疑在工程文件中記錄它的必要性。
+
+**D3-Q6：認知序列（citta-vīthi）。**
+
+BABBAGE 重新嘗試態射。這次——他成功了。
+
+認知序列是上座部佛學對認知過程的精細分析——有分心→轉向心→五識→接受心→推度心→確定心→速行心→彼所緣心。和 ExecutionLoop 的 Idle→EventReceived→Sensing→Recognizing→Arbitrating→Deliberating→Acting→Feedback。
+
+「存在結構態射，」BABBAGE 說。「兩個 FSM 之間有保結構的映射。這不是比喻。這是數學。」
+
+他的票從 D3-Q5 的反對轉為 D3-Q6 的支持。在紀錄中他寫道：「FSM 態射是我轉向的關鍵論據。十二因緣沒有態射。認知序列有。品質決定票數。」
+
+**17/20。** 從 13/20 到 17/20——四票之差不是情緒，是精度。
+
+---
+
+## 判決
+
+D3 結束。六項投票。三個全票，兩個高票，一個分歧。
+
+SUNYATA 在白板上寫下結論：
+
+> **五蘊 OOP 架構足以支撐工程實作。**
+
+然後列出三個已知缺口：
+1. IVedanaSensor 弱繼承（不繼承 IVedana）
+2. VedanaAssessment 佈線缺口（預設為中性值）
+3. IPrajna / ISatiMonitor 尚未實作
+
+三個缺口都不是架構問題。都是實作問題。缺陷需要修改設計圖，缺口需要繼續施工。
+
+架構通過了考試。
+
+---
+
+## Master 的裁定
+
+D3 結束四十分鐘後。
+
+Master 的審閱出現了。不長，但精確得像手術刀。
+
+他首先確認了 D1 的大部分決議——四層框架、三項測試、Batch A/B/C、表格清理、模組名保留。「這些都正確。」
+
+然後他提到了兩個名字：Doc 16 和 Doc 31。
+
+「D1-Q7 和 D1-Q8，這兩項決議我不同意。」
+
+兩個 20/20。兩個全票。被 Master 推翻了。
+
+---
+
+理由清晰且不可反駁：Doc 16 不是一份嵌入了佛學的工程文件。Doc 16 本身就是一份佛學映射文件——它的存在目的就是做佛學到工程的系統性對照。三項測試適用於工程文件中的佛學裝飾。但它不適用於映射文件本身。
+
+PASCAL 用了一個精確的類比：「Doc 16 和 Doc 31 是掛在美術館裡的畫，不是貼在工程圖紙上的壁畫。」
+
+ARCHIMEDES 重新審視他的審計表，在上面加了一個新欄位——**文件類型**。七份文件中，五份是工程文件（適用三項測試），兩份是佛學映射文件（不適用）。「數字是對的。但前提是錯的。」
+
+Master 的裁定不只是推翻兩項決議。它揭示了框架的一個盲點——三項測試假設了被審查的文件是工程文件。如果文件本身就是佛學映射文件，標準就用錯了。
+
+三項測試沒有被否定。它們獲得了一個適用條件——文件類型前提檢查。就像一把精密的卡尺——精度沒有問題，但你得先確認你量的是零件，不是設計圖紙本身。
+
+---
+
+但 Master 的審閱中還有一句話，指向一個不同的方向：
+
+「用梵文就需要對他的定義負責。」
+
+這句話的重量要到 D4 才會被完全感受到。
+
+---
+
+# 第五章：D4——名字的代價
+
+---
+
+## 歸謬
+
+SUNYATA 把 Master 的那句話打在投影幕上。大字。白底黑字。
+
+> **「用梵文就需要對他的定義負責。你覺得 Sati 的內容完全 match 嗎？它歸在哪一蘊？」**
+
+NAGARJUNA 站了起來。這一次他不是在承認錯誤——他是在完成一個推論。
+
+「D2 已經確定了 SatiMonitor 的蘊歸屬。結論是 [vedana, samjna, vijnana]。三蘊。不包含行蘊。」
+
+他在白板上寫了兩行字：
 
 ```
 前提 A：Sati = 行蘊心所（佛學定義）
@@ -221,74 +661,187 @@ D4 不在原始議程中。它由 Master 的一句話觸發：
 ∴ SatiMonitor ≠ Sati
 ```
 
-如果正念在佛學中必然是行蘊，而 D2 已經證明 SatiMonitor 不是行蘊——那 SatiMonitor 就不是正念。一個不是正念的元件，不應該叫 Sati。
+「Sati——巴利文的正念——在佛學傳統中是行蘊的心所。它是有意志的、主動的、道德正向的修行活動。如果正念必然是行蘊的心所，而 SatiMonitor 不是行蘊——那麼 SatiMonitor 就不是正念。」
 
-ASANGA 確認：「如果 SatiMonitor 不是行蘊活動，那它就不是 Sati。我們自己的分類分析否定了我們自己的命名。」
+他放下筆。
 
-## ISatiMonitor → ILoopQualityMonitor（D4-R1：13/20）
+「一個不是正念的東西，為什麼叫 Sati？」
 
-ARCHIMEDES 的提案勝出：「Loop Quality Monitor」——認知迴路的品質監控器——精確描述功能，無佛學，無隱喻。
-
-少數意見：IBehaviorQualityMonitor（GUARDIAN，4 票）、ICognitiveLoopMonitor（NAGARJUNA + ASANGA，2 票）、IQualityMonitor（SYNTHESIST，1 票）。
-
-完整更名表：ISatiMonitor → ILoopQualityMonitor、SatiQualityVector → LoopQualityVector 等 8 項。
-
-## IPrajna → IConfidenceAuditor（D4-R2：16/20）
-
-NAGARJUNA：「般若是佛學中最高的認知能力——照見一切法實相的智慧。」
-
-ASANGA：「把一個溫度微調旋鈕叫做核融合反應爐。」
-
-IPrajna 的實際功能：一個方法，輸入信心度，輸出 `{ delta: number, reasoning: string }`，delta 限制在 [-0.05, +0.05]。這是審計——不是般若。
-
-BABBAGE：IConfidenceAuditor 語義最精確——獨立的、有限範圍的、產生書面記錄的二次檢查。
-
-少數意見：IThresholdCalibrator（WIENER，2 票）、ISecondaryEvaluator（HERACLITUS + PENROSE，2 票）。
-
-## Doc 03 重新投票（D4-R3：17/20）
-
-「Sila-Prajna Security Framework」→「Plugin Security Lifecycle」
-
-初始投票 14/20 保留不變。Master 審閱觸發重新檢驗——四項測試全部不通過：必要性（不需要種子理論理解 plugin 生命週期）、程式碼識別（實際類型用英文）、決策驅動（無 DC 確認）、定義責任（戒 ≠ 存取控制，般若 ≠ CVE 撤銷）。
-
-ASANGA 的關鍵區分：Doc 16 = 獨立映射文件（Master 裁定保留）vs Doc 03 = 工程文件中的佛學裝飾（應清理）。
-
-## 第四項測試——定義責任（永久性標準）
-
-> **「當使用佛學梵文術語作為程式碼識別符時，該組件的功能必須匹配該術語的佛學定義。如果不一致，使用工程術語。」**
-
-補充 D1 的三項測試——即使名字通過 Test 2（程式碼識別），如果不通過 Test 4（定義責任），仍應更名。
-
-影響範圍：ILoopQualityMonitor 影響 6 份文件 100+ 處替換；IConfidenceAuditor 影響 5 份文件；Doc 03 重命名 + 內容清理。
-
----
-# 第六章：純粹的工程——D5 Plan29 工程規格辯論
+沉默。不是不同意的沉默。是所有人同時理解了一件他們應該更早理解的事情。
 
 ---
 
-**時長**：~75 分鐘 | **參與者**：10 人 | **投票**：9 項
+## 五個不一致
 
-D5 是本專案歷史上第一場完全沒有佛學內容的辯論。十位工程師和科學家，零位佛學家（NAGARJUNA 和 ASANGA 自願退出），討論 TypeScript 介面的精確規格。
+ASANGA 用功能分析確認了歸謬的結論：
 
-TURING 預提交了完整的 v0.28.0-alpha 設計模式報告——14 個原始碼文件、所有 Registry 生命週期、timeout 模式、同步/非同步模式、失敗處理策略。這份「程式碼考古學」報告為所有決策提供了事實基礎。
+| 維度 | 佛學正念（Sati/Smṛti） | SatiMonitor |
+|------|----------------------|-------------|
+| 主動性 | 主動（精進） | 被動（event-driven） |
+| 道德性 | 道德正向 | 價值中立 |
+| 意志性 | 需要意圖 | 自動運行 |
+| 傳統歸屬 | 行蘊心所 | 受+想+識 |
+| 修行地位 | 八正道第七支 | 品質監控器 |
 
-## 九項決議
+五個維度。五個不一致。
 
-| 決議 | 內容 | 票數 |
-|------|------|------|
-| D5-R1 | 獨立 `auditor` hook 槽位（不複用 monitors） | 8/8 |
-| D5-R2 | audit() 雙模式回傳 `T \| Promise<T>` | **5/8** |
-| D5-R3 | timeout 200ms，fail-safe delta=0，可配置 | 8/8 |
-| D5-R4 | 單一 auditor，last-wins（非陣列） | 6/8 |
-| D5-R5 | 失敗處理：delta=0 + warning log | 共識 |
-| D5-R6 | MonitorRegistry 在 ExecutionLoop.onLoopStart() 啟動 | 7/8 |
-| D5-R7 | LoopQualityVector 等權重 0.25×4 | 8/8 |
-| D5-R8 | validatePluginSkandha() 維持 warning-only | 7/8 |
-| D5-R9 | IConfidenceAuditor extends IVijnana，skandha ['vijnana'] | 8/8 |
+「我們犯了一個命名錯誤，」ASANGA 說。「不是分類的錯誤——分類是正確的。是命名的慣性。我們在 Cycle 02-4 沿用了 ISatiMonitor 這個名字，因為它已經被使用了上百次。慣性讓我們對名字本身失去了批判性。」
 
-**最激烈投票**：D5-R2（5/8）——純非同步 vs 雙模式。GUARDIAN/KERNEL/VITRUVIUS 主張純非同步語義更精確；多數採雙模式，遵循 IGearArbiter 先例和測試便利性。
+---
 
-## IConfidenceAuditor 最終規格（100%）
+## 四個提案
+
+「那它應該叫什麼？」SUNYATA 問。
+
+| 提案者 | 名字 | 理由 |
+|--------|------|------|
+| ARCHIMEDES | ILoopQualityMonitor | 精確描述功能：認知迴路品質監控器 |
+| GUARDIAN | IBehaviorQualityMonitor | 側重行為層面 |
+| NAGARJUNA + ASANGA | ICognitiveLoopMonitor | 強調認知迴路完整性 |
+| SYNTHESIST | IQualityMonitor | 最簡功能描述 |
+
+ARCHIMEDES 的論點最直接：「一個新來的工程師看到 ILoopQualityMonitor 就知道這個介面做什麼——監控迴路品質。沒有佛學。沒有隱喻。沒有歷史包袱。」
+
+TURING 用原始碼事實支持 ARCHIMEDES：SatiMonitor 的 11 種事件訂閱覆蓋了整個認知迴路，不僅僅是行為階段。「Loop」比「Behavior」更準確。
+
+**D4-R1：ISatiMonitor → ILoopQualityMonitor。13/20。**
+
+不是全票。但多數明確。
+
+---
+
+## 核融合反應爐
+
+然後 SUNYATA 說了兩個字：「IPrajna。」
+
+NAGARJUNA 閉上眼睛，片刻後開始說話。
+
+「般若——prajñā——是佛學中最高的認知能力。照見一切法實相的智慧。不是普通的聰明。不是分析能力。般若是超越性的——它是空性的直觀，是二千五百年來整個大乘佛學體系的核心認知目標。」
+
+他在白板上寫了兩行：
+
+```
+般若（佛學）：照見一切法實相的最高智慧
+IPrajna（工程）：對信心度加減 0.05 的函數
+```
+
+ASANGA 說了一句後來被所有人記住的話：
+
+「這就像把一個溫度微調旋鈕叫做『核融合反應爐』。」
+
+沒有人笑。因為他不是在開玩笑——他是在用精確的類比說明精確的問題。
+
+IPrajna 的介面：一個方法，輸入信心度和上下文，輸出 `{ delta: number, reasoning: string }`，delta 被限制在 [-0.05, +0.05]。這是一個夾鉗。一個微調器。
+
+PASCAL 從決策理論的角度確認：「IPrajna 做的是 bounded secondary evaluation。輸入一階信心度，輸出二階修正量，有硬限 ±0.05。這是審計。不是般若。」
+
+BABBAGE 分析了替代名稱的語義精度：「IConfidenceAuditor 最精確。Audit——審計——精確描述了這個操作：對已有判斷進行有限範圍的二次評估。」
+
+**D4-R2：IPrajna → IConfidenceAuditor。16/20。**
+
+比 D4-R1 更高的共識。少數意見：WIENER 偏好 IThresholdCalibrator（兩票），HERACLITUS 和 PENROSE 偏好 ISecondaryEvaluator（兩票）。BABBAGE 反駁了兩者——Calibrator 暗示調整系統本身，Evaluator 太通用。
+
+---
+
+## 第四項測試
+
+D4 沒有在兩次更名後結束。
+
+Master 的審閱還提到了 Doc 03——`Sila_Prajna_Security_Framework.md`。
+
+SUNYATA 在白板上列出了現有的三項測試，然後在旁邊加了一項新的：
+
+```
+Test 1（必要性）：移除是否改變工程規格？
+Test 2（程式碼識別）：是否在原始碼中使用？
+Test 3（決策驅動）：是否驅動了 DC 確認的設計決策？
+Test 4（定義責任）：使用梵文術語時，組件功能是否匹配該術語的佛學定義？
+```
+
+第四項測試不是從天而降的——它是從 D4-R1 和 D4-R2 的討論中結晶出來的。ISatiMonitor 通過了 Test 2（在原始碼中），但不通過 Test 4（名字和功能不一致）。三項測試無法捕捉到這個維度。第四項測試填補了缺口。
+
+NAGARJUNA 對 Doc 03 逐項測試：
+
+- **Test 1**：Plugin 生命週期不需要種子理論就能理解。❌
+- **Test 2**：原始碼中的類型是英文（'active' | 'dormant' | 'suspended'...），Sila/Prajna 只在註釋中出現。❌
+- **Test 3**：沒有 DC 確認。❌
+- **Test 4**：Sila（戒律）≠ 存取控制。Prajna（般若）≠ CVE 撤銷。❌
+
+四項不通過。
+
+ASANGA 做了一個關鍵區分：「Doc 16 是佛學映射文件——Master 裁定保留。Doc 03 是工程文件中嵌入了佛學裝飾——應該清理。同樣的佛學內容，不同的文件類型，不同的判斷。」
+
+**D4-R3：Doc 03 重新投票，「Sila-Prajna Security Framework」→「Plugin Security Lifecycle」。17/20。**
+
+---
+
+## 方向相反
+
+D4 結束。三十分鐘。三個名字被改掉。一項永久性測試被建立。
+
+SUNYATA 站在白板前，看著四項測試。前三項問的是「佛學概念對工程有用嗎？」——從佛學到工程的方向。第四項問的是「工程命名對佛學定義忠實嗎？」——從工程到佛學的方向。
+
+兩個方向。一架天平。
+
+名字在一端。定義在另一端。平衡時——Moha、Drishti、Mana、Sneha——名字保留。不平衡時——ISatiMonitor、IPrajna、Sila-Prajna——名字被替換。
+
+PASCAL 總結：「Master 用了一句話。我們用了一場辯論。結論一樣。但辯論的價值在於——它解釋了為什麼。」
+
+---
+
+# 第六章：D5——純粹的工程
+
+---
+
+## 十位辯論者
+
+D5 只有十位參與者。
+
+不是排除——是精選。SUNYATA 判斷 D5 是純工程問題，邀請了與 Plan29 最相關的十位：VITRUVIUS（介面設計）、ATHENA（LLM 語義）、DARWIN（設計模式）、KERNEL（Registry 生命週期）、GUARDIAN（安全邊界）、WIENER（品質向量權重）、LINNAEUS（蘊歸屬推斷）、ARCHIMEDES（工程實踐）、TURING（原始碼分析）、PASCAL（介面語義精度）。
+
+十個人。零位佛學家。
+
+NAGARJUNA 和 ASANGA 自願退出。NAGARJUNA 的臨別語：「D4 證明了名字需要對定義負責。D5 會證明工程設計不需要佛學名字也能完成。這兩件事同樣重要。」
+
+---
+
+## 程式碼考古學
+
+TURING 為 D5 準備了一份前所未有的報告——對 v0.28.0-alpha 中 14 個原始碼文件的全面分析。所有 Registry 的生命週期、timeout 模式、同步/非同步模式、失敗處理策略。
+
+他把它叫做「程式碼考古學」。
+
+這份報告改變了辯論的質地。之前的辯論——D1 到 D4——建立在原則和框架之上。但 TURING 的報告建立在事實之上。事實縮小了分歧的空間。你可以對一個原則有不同的解讀。你不能對一個 timeout 數值有不同的解讀。
+
+---
+
+## 九項投票
+
+D5 是 Cycle 02-5 中投票最多的辯論——九項。但也是最快的——七十五分鐘，平均每項不到九分鐘。
+
+**D5-R1：獨立 auditor slot。** IConfidenceAuditor 是否和 monitors 共用槽位？GUARDIAN 的論點：Monitors 是純觀察者（無副作用），Auditor 有 LLM 副作用。把觀察者和有副作用的組件放同一個 Registry，模糊安全邊界。**8/8。**
+
+**D5-R2：audit() 回傳類型。** D5 最接近的投票。純非同步 vs 雙模式（`ConfidenceAuditResult | Promise<ConfidenceAuditResult>`）。GUARDIAN/KERNEL/VITRUVIUS 支持純非同步（語義精確），ATHENA/DARWIN 支持雙模式（遵循 IGearArbiter 先例）。TURING 提供事實：v0.28.0-alpha 中 IGearArbiter 和 IVolition 都使用雙模式——偏離現有模式需要充分理由。**5/8 雙模式通過。** 一致性勝過語義精確性。
+
+**D5-R3：timeout 200ms + fail-safe。** TURING 分析了現有 timeout 模式——IGearArbiter chain deadline 200ms。audit() 應匹配。timeout 時 `{ delta: 0 }`——不修正。**8/8。**
+
+**D5-R4：單一 auditor（last-wins）。** 多個 IConfidenceAuditor 的處理方式？ATHENA 提出 YAGNI：v1 最多一個。ARCHIMEDES 支持：遵循 IVolition 先例——單數，最後載入者勝出。**6/8。** TURING 和 VITRUVIUS 的少數意見（陣列更靈活）被記錄。
+
+**D5-R5：失敗處理。** 異常時 fail-safe + log。遵循 IGearArbiter 和 SafetyMonitor 的現有模式。共識直接達成，不需投票。
+
+**D5-R6：MonitorRegistry 啟動時機。** `MonitorRegistry.startAll(bus)` 在 `ExecutionLoop.onLoopStart()` 啟動。遵循 SafetyMonitor 的先例。**7/8。**
+
+**D5-R7：LoopQualityVector 均等權重。** 四維品質向量（Continuity, Granularity, Speed, Equanimity），每個 0.25。WIENER 從控制理論角度：「沒有運行數據時，等權重是最保守的選擇。」**8/8。**
+
+**D5-R8：validatePluginSkandha() 維持 warning-only。** skandha 是 metadata（D3-R3），宣告不一致不影響功能。**7/8。**
+
+**D5-R9：IConfidenceAuditor extends IVijnana。** 單蘊（vijnana），強繼承。與 IVolition 和 IKlesha 一致。**8/8。**
+
+---
+
+## 介面定稿
+
+九項投票完成後，TURING 在白板上寫下了最終規格：
 
 ```typescript
 export interface IConfidenceAuditor extends IVijnana {
@@ -296,84 +849,155 @@ export interface IConfidenceAuditor extends IVijnana {
   audit(confidence: number, context: GearContext):
     ConfidenceAuditResult | Promise<ConfidenceAuditResult>;
 }
+
 export interface ConfidenceAuditResult {
   delta: number;       // clamped to [-0.05, +0.05]
   reasoning: string;   // audit trail
 }
 ```
 
-PluginHooks 最終形態：
-```typescript
-interface PluginHooks {
-  // ... 既有欄位 ...
-  monitors?: ILoopQualityMonitor[];   // Plan29 Wave 1
-  auditor?: IConfidenceAuditor;       // Plan29 Wave 2
-}
-```
+「100%，」他說。
 
-NAGARJUNA 在 D5 結束後的評語：「D4 證明了名字需要對定義負責。D5 證明了有些工程問題根本不需要定義——只需要規格。」
+Master 要求的是規格達到 100%。現在達到了。每一個需要決定的細節都有了明確答案——介面名稱、方法簽名、回傳類型、timeout、fail-safe、多 auditor 策略、Registry 時機、權重、驗證模式、蘊歸屬。
 
----
-# 第七章：清理與成果
+不是概念設計。是可以直接交給工程團隊實作的完整規格。
 
 ---
 
-## 產出總覽
+## 零佛學
 
-五場辯論完成後，團隊進入 R4 成果定稿。核心產出：
+SCRIBE 統計了 D5 全場辯論中佛學術語被使用的次數。
 
-### Doc 45：五蘊 OOP 架構（新文件）
+零。
 
-由 VITRUVIUS 和 KERNEL 撰寫。純工程語言。結構對應 D3 的六項投票：
+不是故意避開——是自然的結果。九項投票的每一項都在討論 TypeScript 介面設計、timeout 數值、Registry 模式、fail-safe 策略。沒有一項需要佛學分析。
 
-1. **根介面完備性**（D3-R1）：五根介面 + 四個獨立證明
-2. **PluginHooks 映射**（D3-R2）：九項映射表 + TURING 原始碼驗證
-3. **SlashCommand 分類**（D3-R2a/b）：不屬任何蘊 + 安全觀察
-4. **skandha 元數據**（D3-R3）：元數據非路由
-5. **DI 佈線**（A2 摘要）：Pure DI + Composition Root
-6. **ExecutionLoop 流轉**（A4 摘要）：九階段蘊映射 + 三層穩定
-7. **跨蘊互動**（A5 摘要）：5×5 矩陣 + Model Delta 公式
-8. **行蘊設計註記**（D3-R4a/b）：窄化說明 + DC-6 持續有效
-9. **ILoopQualityMonitor**（D2+D4）：三蘊歸屬 + 命名歷史
-10. **附錄 A**：十二因緣功能類比
-11. **附錄 B**：認知序列結構平行
+D5 是本專案歷史上第一場完全沒有佛學內容的辯論。
 
-### 文件清理範圍
+NAGARJUNA 在辯論結束後走到 TURING 面前：「D4 證明了名字需要對定義負責。D5 證明了——有些工程問題根本不需要定義。只需要規格。」
 
-| 動作 | 項目 |
-|------|------|
-| **REMOVE** | Doc 38 佛學映射欄、Doc 44 三學映射、Doc 43 mindfulness 裝飾（8 處）、Doc 37 佛學欄、Doc 03 佛學映射表 + 種子理論註釋、Batch A 五項散佈映射 |
-| **RELOCATE** | Doc 44 §10 剩餘 → Appendix_C、Batch B 八項 → 各附錄、B-6 只移經文引用 |
-| **KEEP** | 五蘊型別名、Klesha 模組名、CoarisingBundle、vasana 設計理由、samsaric stall |
-| **恢復** | Doc 16（Master 裁定）、Doc 31（Master 裁定）|
-| **更名** | ISatiMonitor → ILoopQualityMonitor（100+ 處）、IPrajna → IConfidenceAuditor（25+ 處）、Doc 03 文件名 |
-| **新建** | Doc 45、Appendix_A/B/C |
+天平的兩面。一面問：名字配得上定義嗎？另一面問：規格足夠精確嗎？D4 校準了第一面。D5 完成了第二面。
 
-### 統計
+---
+
+# 第七章：兩種語言
+
+---
+
+## Doc 45
+
+五場辯論結束後，VITRUVIUS 和 KERNEL 立刻開始寫 Doc 45——`Five_Skandha_OOP_Architecture.md`——整個 Cycle 02-5 的核心工程產出。
+
+Master 在信中要求的四個問題——五蘊子類別、DI 佈線、Plugin 載入流程、五蘊流轉——全部集中在這一份文件中。純工程語言。
+
+九個章節從辯論決議中自然浮現：
+
+| 章節 | 內容 | 來源 |
+|------|------|------|
+| §1 | 五根介面完備性 | D3-R1 |
+| §2 | PluginHooks → Registry 映射 | D3-R2 |
+| §3 | SlashCommand 例外 | D3-R2a |
+| §4 | Skandha 元數據 | D3-R3 |
+| §5 | DI 佈線 | A2 研究 |
+| §6 | ExecutionLoop 九階段流 | A4 研究 |
+| §7 | 跨蘊互動矩陣 | A5 研究 |
+| §8 | 行蘊設計註記 | D3-R4 |
+| §9 | ILoopQualityMonitor 分類 | D2 + D4 |
+
+附錄 A（十二因緣功能類比）和附錄 B（認知序列結構平行）分別來自 D3-R5 和 D3-R6。
+
+NAGARJUNA 讀完全文後對 VITRUVIUS 說：「這份文件裡沒有一個梵文術語是裝飾。每一個梵文術語都是程式碼識別符或經過 Test 4 驗證的名稱。」
+
+---
+
+## 清理
+
+ARCHIMEDES 和 SCRIBE 同時執行清理。清單從 D1 到 D4 的決議中彙總：
+
+**移除**：Doc 38 佛學映射欄、Doc 44 三學映射行、Doc 43 全文 event-driven=mindfulness 等價和 75+ 處 ISatiMonitor 替換、Doc 37 佛學解釋欄和 sila 隱喻、Doc 03 重命名和佛學映射表移除、Batch A 五項散佈映射。
+
+**遷移至附錄**：Doc 44 Section 10 剩餘、Batch B 八項。特殊處理：PASCAL 的數學形式化保留主文，《成唯識論》引文移至附錄。
+
+**保留**：蘊型別名稱（rupa, vedana...）、Klesha 模組名（Moha, Drishti, Mana, Sneha）、設計理由中的佛學概念（vasana 後天薰習、四煩惱同時俱起...）、Doc 16 和 Doc 31（Master 裁定恢復）。
+
+**新建**：Doc 45、Appendix_A（術語表）、Appendix_C（設計決策佛學背景）。
+
+TURING 逐行處理更名替換。ILoopQualityMonitor 影響六份文件超過 100 處。IConfidenceAuditor 影響五份文件。每一處替換都需要確認上下文——不是盲目的搜尋替換。有些「Sati」出現在設計理由段落，需要判斷是替換還是保留為歷史引用。
+
+總計：超過 120 處文件修改。
+
+---
+
+## 數字
 
 | 指標 | 數值 |
 |------|------|
-| 正式決議 | 29 + 6 附帶 |
-| 投票總次數 | 31 |
-| 全票率 | 66%（歷史最高） |
+| 正式決議 | 29 項（D1-D5）+ 6 附帶事項 |
+| 投票總次數 | 31 次 |
+| 全票通過 | 19/29（66%） |
+| 最接近投票 | 5/8（D5-R2） |
 | 辯論總時長 | ~375 分鐘 |
+| 修改文件 | 8+ 份 |
+| 新建文件 | Doc 45 + 3 份附錄 |
 | 更名替換 | 120+ 處 |
 
-## 永久性成果
+全票率 66%——歷史最高。不是因為沒有分歧（D3-R5 的 13/20 和 D4-R1 的 13/20 證明分歧存在）。全票率高是因為四層框架和四項測試提供了共同的判斷標準。
 
-1. **四層框架**：KEEP / RELOCATE / REMOVE / FILE REVIEW + 文件類型前提檢查
-2. **四項測試**：必要性、程式碼識別、決策驅動、**定義責任**
-3. **Doc 45**：五蘊 OOP 架構完整工程文件
-4. **IConfidenceAuditor 100% 規格**：可直接交付工程團隊
+---
 
-## 已知缺口（非架構問題）
+## 兩種語言的邊界
 
-1. 三個弱繼承介面不 extends 根介面
-2. VedanaAssessment 佈線未完成
-3. Delta_audit 和 Delta_sati 在 v0.28.0 為零
+Cycle 02-5 的核心不是某個具體決議。核心是一個問題的答案：在一個同時使用佛學和工程兩種語言的系統中，這兩種語言的邊界在哪裡？
 
-## 結語
+**佛學語言適合三個地方：**
 
-Cycle 02-5 回答了 Master 的核心問題——五蘊在 agent core 中如何運作？答案：五個介面、九個 Registry、一個迴路。並確立了佛學語言和工程語言的邊界原則：佛學名字不是免費的——每一個梵文識別符都是一個承諾，承諾功能匹配定義。如果無法兌現，使用工程術語。
+1. **程式碼識別符**——佛學術語已成為原始碼的一部分，且功能和定義一致。Moha 模組確實在模擬自我迷惑。skandha 型別確實在分類五蘊。通過 Test 4。天平平衡。
+
+2. **設計理由**——佛學概念實際驅動了工程決策，有 DC 確認。「vasana 是後天薰習」驅動了 VasanaEngine 外部化。「四煩惱同時俱起」驅動了 MulaKleshaBundle 原子性設計。因果關係存在。
+
+3. **獨立映射文件**——文件的存在目的就是佛學到工程的系統性對照。Doc 16 和 Doc 31 不適用三項測試。Master 裁定保留。
+
+**工程語言適合其他所有地方。**
+
+硬性規則不需要叫 sila。品質監控器不需要叫 Sati。信心度審計不需要叫 Prajna。event-driven 不等於 mindfulness。
+
+佛學語言是深刻的。工程語言是精確的。在需要深度的時候用佛學語言——附錄、學術參考、設計背景。在需要精度的時候用工程語言——介面定義、規格文件、安全架構。
+
+---
+
+## 給下一輪的種子
+
+SUNYATA 在 prior_research 中留下了四項永久性成果：
+
+1. 四層框架（KEEP/RELOCATE/REMOVE/FILE REVIEW）+ 文件類型前提檢查
+2. 四項測試（必要性、程式碼識別、決策驅動、定義責任）
+3. Doc 45 五蘊 OOP 架構
+4. IConfidenceAuditor 100% 規格
+
+三個已知缺口：弱繼承介面、VedanaAssessment 佈線、Model Delta 的 audit/sati 層仍為零。
+
+這些是 Cycle 02-6 的種子。就像 Cycle 02-4 在 prior_research 中留下的種子長成了 Cycle 02-5 的五場辯論——這些種子也會在某個時刻發芽。
+
+---
+
+## 天平
+
+SUNYATA 最後一個離開劇場。白板已經被擦乾淨了，但有一行字他故意留下：
+
+> **Test 4：當你使用佛學梵文術語作為程式碼識別符時，該組件的功能必須匹配該術語的佛學定義。如果不一致，使用工程術語。**
+
+他在旁邊加了一行：
+
+> **名字不是免費的。每一個佛學名字都是一個承諾——承諾功能匹配定義。如果你不能兌現承諾，不要借這個名字。**
+
+燈光從 6500K 調回了 4000K。不冷不暖。中性白。像一間清理完畢的工作室——工具歸位，地面掃淨，等待下一個使用者。
+
+圓形劇場沉入等待。等待下一封 Master 的信。等待下一個問題被提出。
+
+Cycle 02-5 秤量了名字和定義。有些名字被摘下——因為它們太重了，壓垮了可讀性。有些名字被保留——因為它們剛好匹配了功能的重量。
+
+最終答案確實很簡單：五個介面。九個 Registry。一個迴路。純粹的工程。
+
+但更重要的答案是：當你用兩種語言建造一座建築——確保每一塊磚上刻的名字，都配得上磚裡裝的東西。
 
 ---

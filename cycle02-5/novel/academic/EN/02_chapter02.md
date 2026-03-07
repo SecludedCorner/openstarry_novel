@@ -1,41 +1,124 @@
-# Chapter 2: Boundaries -- D1 Buddhist Mapping Boundary Debate
+# Chapter Two: D1 — The Boundary of Buddhist Mappings
 
 ---
 
-**Duration**: ~90 minutes | **Chair**: SUNYATA | **Votes**: 10 items | **Result**: All 20/20
+## Ten Unanimous Votes
 
-D1 set a record in the project's history: ten votes, ten unanimous passes, zero minority opinions.
+D1 set a historical record for the project: ten votes, ten rounds of 20/20, zero minority opinions.
 
-## Four-Tier Framework and Three Tests (D1-Q1: 20/20)
+In a research team of 20 members spanning 6 disciplines, this level of consensus is extraordinarily rare. Of Cycle 02-4's 55 resolutions, fewer than one-third achieved unanimous approval. Why could D1 accomplish this?
 
-The four-tier framework and three tests were formally confirmed as permanent adjudication criteria. NAGARJUNA provided the philosophical foundation (Two Truths separation), PASCAL provided the mathematical argument (damage asymmetry), and ARCHIMEDES provided operational validation (full coverage of 50 cases).
+Not because there were no disagreements. Because disagreements were resolved by the framework.
 
-## Three Batches of Adjudication
+The four-tier framework and three tests had already existed since R0, were argued for by three independent disciplines in R1, and passed R2 with zero objections. By the time D1 voting came, the framework itself was no longer the subject of debate — it was the instrument of debate. When everyone measures with the same ruler, measurements naturally converge.
 
-**Batch A (D1-Q2-A: 20/20)** -- 5 mappings explicitly criticized by Master, all REMOVE:
-- Hard rules = sila -> REMOVE
-- Soft rules = upaya -> REMOVE
-- Heuristic rules = smrti -> REMOVE
-- event-driven = mindfulness -> REMOVE
-- Threefold Training mapping -> REMOVE
+---
 
-NAGARJUNA acknowledged that the first three were "retro-fitted labels" -- Buddhist names added after the engineering conclusions were already settled.
+## D1-Q1: Framework Vote
 
-**Batch B (D1-Q2-B: 20/20)** -- 8 scholarly content items, all RELOCATE to appendices. Special handling: B-6 (PASCAL's Moha mathematical formalization `Var(epsilon) = f(theta_moha)`) retained in main text; only the *Cheng Weishi Lun* citation moved to appendix.
+The four-tier framework (KEEP / RELOCATE / REMOVE / FILE REVIEW) + three tests (Necessity / Code Identity / Decision-Driven).
 
-**Batch C (D1-Q2-C: 20/20)** -- 7 code identifiers / DC-confirmed concepts, all KEEP. Includes five skandha type names, Klesha module names, CoarisingBundle, etc.
+Vote: **20/20.** Five minutes.
 
-## Individual Document Resolutions
+---
 
-- **D1-Q3** (20/20): Doc 38 L540-544, remove Buddhist mapping column.
-- **D1-Q4** (20/20): Doc 44 L478, Threefold Training mapping REMOVE; Section 10 remainder RELOCATE. NAGARJUNA acknowledged the Threefold Training mapping was his "category error" -- the Threefold Training is a qualitative classification, while the five-layer model is a quantitative stratification.
-- **D1-Q5** (20/20): Doc 43 renaming deferred until after D2 decision.
-- **D1-Q6** (20/20): Klesha module names Moha/Drishti/Mana/Sneha KEEP. DC-1 confirmed + source code identifiers.
-- **D1-Q7** (20/20): Doc 16 split -- extract Section 5 as independent document. (*Later overturned by Master*)
-- **D1-Q8** (20/20): Doc 31 split downgraded. (*Later overturned by Master*)
+## D1-Q2: The Fate of Fifty Mappings
 
-**Overturning of D1-Q7 and D1-Q8**: Master ruled to restore the original state -- Doc 16 and Doc 31 are standalone Buddhist mapping documents, not decorations within engineering documents. The three tests apply to engineering documents, not to mapping documents. The team's framework was missing a dimension: **document type identification**.
+### Batch A: The 5 Items Criticized by Master (All REMOVE)
 
-ARCHIMEDES added a new column to the audit table -- document type (engineering / design decision / Buddhist mapping) -- as a precondition for the three tests.
+sila = Hard Rules, upaya = Soft Rules, smrti = Monitoring, the Three Trainings mapping, Doc 41 decorative labels.
+
+NAGARJUNA did something in this segment that he had never done in six cycles of research — admitted error in the first person.
+
+"A-1 through A-3 — sila, skillful means, mindfulness — these were added after the D5 debate concluded in Cycle 02-3. They were not conclusions reached during debate. They were labels affixed after the fact. **Post-hoc labeling.**"
+
+He used this precise, unflinching term. Like a surgeon pointing at his own incision and saying "this cut was off."
+
+"Hard Rules don't need to be called sila. Their function is rule enforcement, not disciplinary practice. Using sila to label them is not explaining function — it is applying religious decoration."
+
+PASCAL recorded a formula in his notebook: $P(\text{post-hoc label is decorative} \mid \text{creator voluntarily admits it}) \to 1.0$
+
+Posterior probability approaching 1. When a label's creator voluntarily admits it is decorative, no further evidence is needed.
+
+Vote: **20/20.**
+
+### Batch B: 8 Academic Items (All RELOCATE)
+
+This batch required fine-grained separation — not the black-and-white of KEEP or REMOVE, but the grey of RELOCATE.
+
+ARCHIMEDES established the gold standard for RELOCATE: Doc 37 §9 containing PASCAL's mathematical formalization $Var(\epsilon) = f(\theta_{moha})$. Mathematical formulas stay in the main text (they have independent engineering value); Buddhist citations move to the appendix (design rationale, not engineering specification).
+
+"Keep the mathematics, move the Buddhism" — the interface between engineering content and Buddhist content was cut open with a scalpel, each placed where it belongs.
+
+MN 18 scriptural citations, Doc 41's DD-13 Buddhist background, Doc 44 §10's Buddhist design rationale — each had a concrete relocation plan. Not discarded, but rehomed.
+
+Vote: **20/20.**
+
+### Batch C: 7 Code Identifiers (All KEEP)
+
+TURING offered no opinion. He simply executed one command in his terminal:
+
+```bash
+rg "Moha|Drishti|Mana|Sneha" --type ts -l
+```
+
+Seventeen files. Moha appeared in import statements, in class definitions, in describe blocks, in expect assertions. It was not a label — it was part of the code.
+
+LINNAEUS confirmed from a taxonomic perspective: "These names have become the system's taxonomic labels. They are not appended — they are constitutive of identity. Moha is not a label stuck onto something. Moha is the name of the thing itself."
+
+Vote: **20/20.**
+
+---
+
+## D1-Q3/Q4: Two Precise Surgeries
+
+**D1-Q3**: Doc 38's sila/upaya/smrti comparison table. GUARDIAN identified the cognitive trap — a reader seeing sila = Hard Rules would spend time comprehending an imprecise analogy. Remove the "Buddhist Mapping" column from the table, retain the engineering columns. **20/20.**
+
+**D1-Q4**: Doc 44's Three Trainings mapping. NAGARJUNA stood up again: "The three-dimensional mapping onto five layers was my classification error. I retract it." Fifteen words. No argumentation. Retraction carries more force than argument. **20/20.**
+
+---
+
+## D1-Q5/Q6: Deferral and Retention
+
+**D1-Q5**: Doc 43 renaming deferred to D2 (dependent on Sati Plugin's skandha classification). **20/20.**
+
+**D1-Q6**: Klesha four-affliction module names. Test 2 passed (seventeen files). Test 3 passed (DC-1: Master personally selected Sneha). **KEEP. 20/20.**
+
+---
+
+## D1-Q7/Q8: The Fate of Two Documents and a Seed
+
+Doc 16 (decoration ratio ~80%) and Doc 31 (decoration ratio ~70%).
+
+ARCHIMEDES recommended Scheme B split: extract paragraphs with engineering value, delete or downgrade the remainder to appendix. BABBAGE made a correction regarding Doc 31's IPC Cocycle condition — it possesses mathematical rigor and deserves independent preservation.
+
+D1-Q7/Q8: Split. Both votes **20/20.**
+
+But these two resolutions planted a seed. They would later be overturned by Master personally — not because the team's judgment was wrong, but because the judgment framework was missing a dimension. The framework distinguished "engineering content" from "Buddhist decoration," but did not distinguish "Buddhism embedded in an engineering document" from "an independent document whose purpose is Buddhist mapping."
+
+Doc 16 is not an engineering document with embedded Buddhism. Doc 16 is itself a Buddhist mapping document — judging it by "80% decoration ratio" is like judging a poem by its "80% prose ratio." The standard was misapplied.
+
+But this insight would not emerge until Master's review in Chapter Five.
+
+---
+
+## D1 Summary
+
+```
+D1-Q1  : 20/20  Framework
+D1-Q2-A: 20/20  5 items REMOVE
+D1-Q2-B: 20/20  8 items RELOCATE
+D1-Q2-C: 20/20  7 items KEEP
+D1-Q3  : 20/20  Doc 38 table column removal
+D1-Q4  : 20/20  Three Trainings mapping removal
+D1-Q5  : 20/20  Deferred to D2
+D1-Q6  : 20/20  Klesha module names retained
+D1-Q7  : 20/20  Doc 16 split
+D1-Q8  : 20/20  Doc 31 split
+```
+
+Ten votes, zero dissent. A first in project history.
+
+NAGARJUNA's two acts of self-negation were the emotional center of D1. Admitting error is not disgrace — the core of Madhyamaka philosophy is that "emptiness can dispel all views," including one's own.
 
 ---

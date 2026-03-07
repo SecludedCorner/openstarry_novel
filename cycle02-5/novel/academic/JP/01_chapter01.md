@@ -1,37 +1,87 @@
-# 第一章：監査と研究
+# 第一章：監査と準備
 
 ---
 
-## R1：独立研究
+## R1 独立研究
 
-九件の独立研究報告が R1 段階で産出された。三つのトラックが並行して推進された。
+九本の研究が同時に始動した。三つのトラック、十五名の主筆。
 
-### Track A：五蘊工学アーキテクチャ
+### Track A：五蘊エンジニアリングアーキテクチャ
 
-**A1（LINNAEUS + ASANGA）**：五蘊サブカテゴリツリー。完全な OOP インターフェース継承分析——IRupa は IListener と IUI に分かれ、IVedana は ChannelVedana（連続信号）を生成し、ISamjna は IProvider に対応し、ISamskara は ITool に狭化され、IVijnana が最も複雑で、IGuide、IGearArbiter、IVolition、IKlesha の四つのサブインターフェースを管轄する。三つの「弱い継承」ケースが記録された——IVedanaSensor、IGearArbiter、IKlesha はルートインターフェースを明示的に extends しない。
+Track A は Master の最優先課題——純粋なエンジニアリング言語で五蘊アーキテクチャの四つの核心的問いに答えることである。五つのサブ項目を十二名の研究者が分担した：
 
-**A2（VITRUVIUS + KERNEL + TURING）**：DI 配線。Pure DI、`createAgentCore()` が唯一の Composition Root、21 個のコンポーネントが厳密に線形構築、9 個の Registry。Lazy Accessor パターン、Provider 能力フィルタリング、Resolver クロージャ遅延解決。Spring/Guice/InversifyJS との比較マトリクスにより、Pure DI がマイクロカーネルにとって正しい選択であることが確認された。
+| サブ項目 | 主筆 | 内容 |
+|---------|------|------|
+| A1 蘊サブカテゴリ | LINNAEUS + ASANGA | 五蘊の完全なサブカテゴリツリー、SDK ソースコードとの対照 |
+| A2 DI 配線 | VITRUVIUS + KERNEL + TURING | agent-core → plugin-loader → loop の完全な DI チェーン |
+| A3 Plugin 読み込み | DARWIN + MESH | agent.json から running hooks までの完全なフロー |
+| A4 実行フロー | HERACLITUS + WIENER + BABBAGE | sparsha → vedana → samjna → volition → tools → feedback |
+| A5 蘊間相互作用 | LEIBNIZ + ATHENA + PENROSE | vedana→klesha→arbiter→volition→action の相互作用マトリクス |
 
-**A3（DARWIN + MESH）**：Plugin 読み込みライフサイクル。IPlugin = Manifest + Factory。二つの読み込みパス（Sandbox worker thread / Direct main thread）。八状態ライフサイクルステートマシン。Sandbox セキュリティチェーン：署名検証 → 静的 import 分析 → Worker 隔離 → Heartbeat → 指数バックオフ再起動。
+A1 のサブカテゴリツリーは重要な構造的特徴を明らかにした：識蘊が最も多くのサブインターフェースを持ち（IGearArbiter、IVolition、IKlesha、IConfidenceAuditor）、行蘊が最も少ない（ITool 単一インターフェース）。この非対称性には意味がある——識蘊は「判断」であり、判断の次元は「行動」の次元よりも本質的に多い。
 
-**A4（HERACLITUS + WIENER + BABBAGE）**：五蘊実行フロー。FSM 六状態、九段階処理。Phase 1（rupa）→ Phase 3（samjna）→ Phase 5（vijnana）→ Phase 6（samskara）→ Phase 7（vedana）→ Phase 8（vijnana）。三層安定ループ。BABBAGE が完全な FSM 形式仕様を提供した。
+A2 は依存性注入チェーンの完全な追跡を行った。三名の研究者が二日間をかけ、AgentCore のコンストラクタから始まり、PluginLoader の registry 配分を経て、ExecutionLoop の各 hook 呼び出し点に至るまでを追跡した。結論：DI チェーンは完全だが、二つの既知の欠落がある——IVedanaSensor の弱継承（IVedana を継承していない）と VedanaAssessment 配線のデフォルト中性値。
 
-**A5（LEIBNIZ + ATHENA + PENROSE）**：蘊間相互作用。5×5 相互作用マトリクス。Model Delta 五層閾値公式。PENROSE が三つの創発パターン仮説を提出した——適応的保守、双安定スイッチング、注意の漏斗。
+A4 は五蘊実行フロー図の完全版を産出した。HERACLITUS は動的プロセスへの鋭い感性を活かし、一つの SparshEvent が誕生から消滅までの完全なライフサイクルを追跡した。WIENER は制御理論の言語で同じプロセスを再記述した——システムは閉ループ制御器であり、ユーザー目標は参照入力、Context は状態フィードバック、Tool Call は制御変数である。BABBAGE は形式化を行い、有限状態機械によってプロセスの停止性を証明した。
 
-### Track B：仏教マッピング監査
+### Track B：仏学対応づけ監査
 
-**B1（ARCHIMEDES + SCRIBE）**：7 件の文書を逐行監査。50 個のマッピング事例——23 個が KEEP（46%）、13 個が RELOCATE（26%）、14 個が REMOVE（28%）。Doc 43 の装飾比率が最も高かった（60%）。Doc 16 と Doc 31 が「ファイル全体審査」として標識された（装飾比率 80% および 70%）。
+B1 は ARCHIMEDES と SCRIBE が担当した。エンジニアリング実践の専門家が、七つの openstarry_doc 文書を一つずつ、対応づけを一つずつスキャンした。方法は三項テストの機械的適用——各仏学対応づけが三回テストされ、結果は監査表に記録された。
 
-**B2（NAGARJUNA + ASANGA + PASCAL）**：マッピング境界原則。NAGARJUNA の二諦分離、ASANGA の機能位置づけ、PASCAL の損害非対称性（false include の累積認知負荷 >> RELOCATE の一回限りの検索コスト）。三項テストが本文書で正式に論証された。
+最終結果：50 件の対応づけインスタンス。
 
-### Track C：Sati Plugin
+| 処置 | 件数 | 例 |
+|------|------|-----|
+| KEEP | 23 | Skandha 型名、Klesha モジュール名、DC 確認済み制約、CoarisingBundle |
+| RELOCATE | 13 | PASCAL の数学的形式化、MN 18 経典引用、仏学的設計理由 |
+| REMOVE | 14 | śīla/upāya/smṛti ラベル、event-driven=マインドフルネス、戒定慧対応づけ |
 
-**C1（TURING + GUARDIAN）**：純工学機能分析。SatiMonitor は 11 種の EventBus イベントを購読し、三段階パイプライン処理（バッファリング → バッチ分析 → 品質ベクトル計算）を行い、LoopQualityVector 四次元（Continuity, Granularity, Speed, Equanimity）を出力する。**副作用ゼロ**。工学的等価物：APM Agent + 行動パターン分析器 + QoS Monitor + SPC 異常検出器。
+半数近くが KEEP ——仏学的内容のすべてが装飾というわけではない。あるものは身分（Klesha モジュール名）であり、あるものは決定（五蘊分類が PluginHooks 設計を駆動した）である。しかし 14 件の REMOVE ——純粋な装飾であり、除去してもいかなるエンジニアリング仕様も変わらない。
 
-**C2（ASANGA + LINNAEUS）**：蘊構成提案。四つの方案——A ['vedana','samjna']、B ['vedana','samjna','vijnana']（推奨）、C ['samjna','vijnana']、D ['vijnana']。核心論証：SatiMonitor のイベント購読＝受（vedana）、パターン認識＝想（samjna）、品質評価＝識（vijnana）。行蘊は含まない——いかなる動作も実行しないためである。
+ARCHIMEDES は精確な判断を下した：「表全体を除去するのではない。一列を除去するのだ。」彼は大槌でクルミを割るようなことはしなかった——メスでエンジニアリング内容と仏学的装飾を分離したのである。
 
-## R2：交差査読
+二つの特殊文書が FILE REVIEW としてマークされた：Doc 16（Plugin 類型の哲学的対応づけ、装飾比率 〜80%）と Doc 31（八識ランタイムモデル、装飾比率 〜70%）。問題は個々の対応づけにあるのではなく、文書全体の位置づけにあった——エンジニアリング文書に仏学が埋め込まれたものなのか？ それとも仏学的対応づけを目的とした独立文書なのか？
 
-TURING が 40 件以上のコード引用を検証し、4 件の問題を発見した（重大な誤りはなし）。24 の合意点が討論なしで承認された。7 件の未解決問題と 4 件の相違が D1-D3 の討論に入った。
+B2 は NAGARJUNA、ASANGA、PASCAL の三名が対応づけ境界原則を構築した。三つの次元からなるフレームワーク：
+
+- **NAGARJUNA（二諦）**：世俗諦 = エンジニアリング言語。勝義諦 = 仏学概念。世俗諦の文書に勝義諦のラベルを無理に押し込むべきではない。
+- **PASCAL（損害の非対称性）**：False Include の損害は累積的である（読者数 × 閲読回数 × 認知切り替えコスト）。False Exclude の損害は一回限りである（検索コスト）。E[累積] >> E[一回限り]。疑義がある場合は除去に傾けるべきである。
+- **ASANGA（因果効力）**：仏学概念はエンジニアリング成果を駆動したか？ 因果効力あり → 保持。因果効力なし → 除去。
+
+三つの学問分野、三つの経路、一つの結論——装飾的対応づけは除去すべきである。
+
+### Track C：Sati Plugin の位置づけ
+
+C1 は TURING と GUARDIAN が機能分析を担当した。TURING は純粋なエンジニアリング用語で SatiMonitor の四つの機能を列挙した：イベント購読、スライディングウィンドウ、パターン識別、品質指標。そして決定的な「やらないこと」——いかなるアクションも実行せず、いかなる状態も変更せず、いかなる命令も発行しない。
+
+GUARDIAN のエンジニアリング的類比：APM Agent + Behavioral Analytics + QoS Monitor + SPC Anomaly Detector のハイブリッド。
+
+C2 は ASANGA と LINNAEUS が蘊構成分析を担当した。四つの方案を提示した：
+
+| 方案 | 蘊構成 | 理由 |
+|------|--------|------|
+| A | 受 + 想 | 感知 + 認識、最もシンプル |
+| B | 受 + 想 + 識 | 感知 + 認識 + 評価判断 |
+| C | 想 + 識 | 認識 + 評価、受蘊が薄すぎる |
+| D | 純識 | すべての認知活動を識蘊に帰属 |
+
+四つの方案はいずれも論理的根拠を持つが、それぞれに弱点もある。最終的な答えは D2 の議論で決定されることとなった。
+
+---
+
+## R2 相互審査
+
+二十名の研究者が相互審査ネットワークを構成した——各人が自身が主筆でない報告を少なくとも二本審査した。
+
+TURING が最も重要な作業を行った——すべてのコード参照の網羅的検証である。40 件以上の参照を v0.28.0-alpha ソースコードと一つずつ照合した。結果：四つの問題（エラー率 10% 未満）、いずれも低または中程度の深刻度。致命的エラーはなかった。
+
+彼は六文字を述べた：「参照はクリーン。議論に入れる。」
+
+R2 の総括：
+- **24 の合意点**：三つのトラックにまたがり、基盤は堅固
+- **7 つの未決問題**：議論には明確な焦点がある
+- **4 つの相違点**：議論には交鋒がある
+
+パイプラインは通った。手術室の準備は整った。
 
 ---

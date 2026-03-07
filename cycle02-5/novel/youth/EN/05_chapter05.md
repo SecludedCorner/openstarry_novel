@@ -1,58 +1,127 @@
-# Chapter 5: Does Your Name Live Up to You?
+# Chapter 5: D4 -- Does Your Name Live Up to You?
 
 ---
 
-This was the most important debate of the entire Cycle 02-5 -- D4. It wasn't in the original plan. It was triggered by one sentence from Master:
+## The Question
 
-> **"If you use Sanskrit, you must be accountable to its definitions."**
+SUNYATA projected Master's words onto the screen. Large letters. Black text on white.
 
-## The Problem with Names
+> **"When you use Sanskrit, you are responsible for its definition. Do you think Sati's content is a complete match?"**
 
-In Chapter 3, we learned that SatiMonitor doesn't include samskara. But "Sati" in Buddhism means "mindfulness" -- and mindfulness belongs to samskara.
+This was the most central question of the entire Cycle 02-5.
 
-So here's the question:
+---
 
-If SatiMonitor is **not** a samskara activity --> then it is **not** mindfulness --> then why is it called **Sati**?
+## A Logical Deduction
 
-NAGARJUNA used a logical proof (he called it "reductio ad absurdum") to lay out this contradiction:
+Philosopher NAGARJUNA stood up. He wrote three lines on the whiteboard:
 
 ```
-SatiMonitor is not samskara (proven in D2)
-Mindfulness is samskara (Buddhist definition)
-Therefore SatiMonitor is not mindfulness
-Therefore it should not be called Sati
+Premise 1: Mindfulness (Sati) in Buddhism is an activity of samskara
+Premise 2: SatiMonitor does not belong to samskara (D2 already proved this)
+Conclusion: SatiMonitor is not mindfulness
 ```
 
-## The First Rename: ISatiMonitor --> ILoopQualityMonitor
+"If mindfulness is necessarily an activity of samskara, and SatiMonitor is not samskara -- then SatiMonitor is not mindfulness."
 
-Vote: 13/20. The new name means "Loop Quality Monitor" -- it precisely describes what this component does.
+He put down the pen.
 
-## The Second Rename Was Even More Striking
+"Why is something that is not mindfulness called Sati?"
 
-SUNYATA brought up another name: **IPrajna**.
+The room went silent. Not because anyone disagreed -- but because everyone simultaneously understood something they should have understood sooner.
 
-What is Prajna in Buddhism? **The highest wisdom. The ability to see the true nature of all things.**
+---
 
-What does IPrajna do in the code? **It adds or subtracts 0.05 to a number.**
+## Five Inconsistencies
 
-ASANGA said something everyone remembered:
+Buddhist scholar ASANGA brought out a comparison table:
 
-> **"This is like calling a temperature fine-tuning knob a nuclear fusion reactor."**
+| | Mindfulness in Buddhism | SatiMonitor |
+|--|------------------------|-------------|
+| Active or passive? | Active (requires effort) | Passive (runs automatically) |
+| Has a moral direction? | Yes (morally positive) | No (value-neutral) |
+| Requires intention? | Yes | No |
+| Which skandha? | Samskara | Vedana + Samjna + Vijnana |
+| Status? | Seventh factor of the Noble Eightfold Path | A quality monitor |
 
-Nobody laughed. Because he was telling the truth.
+Five aspects. All five inconsistent.
 
-Vote: **IPrajna --> IConfidenceAuditor**, 16/20. The new name means "Confidence Auditor" -- it honestly describes what this component actually does.
+"We made an error," ASANGA said. "Not a classification error -- the classification was correct. It was a naming error. We used this name for so long that we got used to it and forgot to check whether the name itself was right."
+
+---
+
+## The New Name
+
+SUNYATA asked: "Then what should it be called?"
+
+Among four proposals, ARCHIMEDES's (engineering practice expert) received the most support:
+
+**ILoopQualityMonitor** -- loop quality monitor.
+
+The reasoning was straightforward: "A new engineer seeing this name immediately knows what it does -- monitors loop quality. No Buddhism. No metaphors. No history that needs explaining."
+
+**Passed 13/20.**
+
+---
+
+## The Nuclear Fusion Reactor
+
+Then SUNYATA said two words: "IPrajna."
+
+IPrajna is another interface named with a Buddhist term. Prajna (prajña) in Buddhism is the highest wisdom -- transcendent cognition that sees the true nature of all things.
+
+NAGARJUNA wrote two lines on the whiteboard:
+
+```
+Prajna (Buddhism): The highest wisdom that sees the true nature of all phenomena
+IPrajna (engineering): A function that adds or subtracts 0.05 from a confidence score
+```
+
+ASANGA said something that everyone would remember afterward:
+
+"That's like calling a temperature fine-tuning knob a 'nuclear fusion reactor.'"
+
+Nobody laughed. Because he was stating a fact.
+
+What does IPrajna do? It receives a confidence number, adds or subtracts at most 0.05, then returns the result. A fine-tuner. A clamp. The distance between this and "seeing the true nature of all phenomena" is like the distance between a knob and nuclear fusion.
+
+**Passed 16/20: IPrajna -> IConfidenceAuditor (confidence auditor).**
+
+---
 
 ## The Fourth Test
 
-D4 produced a new permanent rule -- the **Definition Accountability Test**:
+D4 didn't just change two names. It also created a new testing standard.
 
-> When you name a program component with a Buddhist term, the component's function must truly match the meaning of that Buddhist term. If it doesn't, use a plain engineering name.
+Before D4, the team had three tests (necessity, code identification, decision-driving). But these three tests had a blind spot -- they never asked: "Does the name match its definition?"
 
-Which names passed this test? **Moha** (self-delusion -- the code really does simulate self-delusion). **Skandha** (aggregate -- the code really does perform Five Skandha classification).
+ISatiMonitor passed Test 2 (it's used in the code). But it failed a more fundamental standard -- its name and its function don't match.
 
-Which names didn't pass? **Sati** (mindfulness -- but SatiMonitor isn't doing mindfulness). **Prajna** (the highest wisdom -- but IPrajna just adds or subtracts 0.05).
+So the team added a fourth test:
 
-Names are not free. Borrowing a great name for an ordinary function -- that doesn't make the function great; it only cheapens the name.
+> **Test 4 (Definition Responsibility): When you use a Buddhist Sanskrit term as a code name, does the component's function truly match the meaning of that Buddhist term? If not, use an engineering term.**
+
+Using this standard to re-examine Doc 03 (`Sila_Prajna_Security_Framework.md`) -- Sila (precepts) used to mean "access control"? Prajna (prajña) used to mean "security vulnerability response mechanism"? All four tests failed.
+
+**Passed 17/20: Doc 03 renamed to Plugin Security Lifecycle.**
+
+---
+
+## The Scale
+
+D4 took only thirty minutes. But it was the climax of the entire Cycle 02-5.
+
+The previous three tests asked: "Is this Buddhist concept useful to engineering?" -- from Buddhism toward engineering.
+
+The fourth test asks: "Is this engineering name faithful to the Buddhist definition?" -- from engineering toward Buddhism.
+
+Imagine a scale. The name on one end, the definition on the other.
+
+When balanced -- the Moha (delusion) module really does simulate deluding behavior -- the name stays.
+When unbalanced -- SatiMonitor is not mindfulness, IPrajna is not prajña -- the name gets replaced.
+
+The scale doesn't care how old or how revered a name is. The scale only cares whether both ends balance.
+
+PASCAL's summary: "Master said it in one sentence. We took a full debate. The conclusion was the same. But the value of the debate is -- it explains why."
 
 ---

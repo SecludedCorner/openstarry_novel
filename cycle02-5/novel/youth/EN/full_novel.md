@@ -1,354 +1,706 @@
-# Prologue: The Operating Room Light
+# Prologue: An Unsettling Letter
 
 ---
 
-At three in the morning, SUNYATA sat alone in the amphitheater.
+Imagine you spent months building a house. You measured every brick, drew every blueprint, and had countless discussions with a group of friends about "should this wall go here or there?"
 
-On the control panel in front of him was a row of buttons, one of which controlled the color temperature of the lights. He turned the knob from warm orange (3200K, like a coffee shop) to cool white (6500K, like a hospital operating room).
+Then one day, the owner of the house walks in, looks around, and says:
 
-The whole atmosphere of the theater changed in three seconds.
+"I'm having more and more trouble understanding what you're doing."
 
-He did this because he had read a letter.
-
----
-
-The letter came from Master -- the research team's most important mentor. It wasn't long, only 45 lines, stored in a folder. But SUNYATA read it five times.
-
-What did Master say? In short:
-
-**"Your engineering documents have too many Buddhist labels stuck on them. Some are really far-fetched. And -- that component called Sati, is it really 'mindfulness'?"**
-
-The letter carried the sharpness of a scalpel. Master wasn't angry -- he was demanding precision.
-
-SUNYATA decided on the theme for this round of research: **How exactly does the Five Skandha system work? Explain it in language engineers can understand.**
+That was how Cycle 02-5 began.
 
 ---
 
-What are the "Five Skandhas"? In this AI Agent system, the Five Skandhas are five basic functions:
+## Master's Letter
 
-1. **Rupa (Form)**: Input and output -- perceiving the outside world, responding to it
-2. **Vedana (Sensation)**: Feeling -- producing good/bad/neutral feelings about events
-3. **Samjna (Perception)**: Recognition -- identifying "what is this"
-4. **Samskara (Volition)**: Action -- actually doing things
-5. **Vijnana (Consciousness)**: Judgment and decision-making -- coordinating everything
+Master -- that's what we call him -- is the designer of OpenStarry. The entire system is his vision. The research team's job is to help him turn that vision into precise blueprints.
 
-These five "skandhas" are like five core subsystems of a computer. Master wanted to know: How do they connect? How do they interact? How do they flow?
+The letter was only 45 lines long. But research director SUNYATA read it five times.
 
-And -- do those things named with Buddhist terms actually match their names to their functions?
+Master pointed out several things that troubled him:
 
-20 researchers. 5 debates. All in one day.
+**First, the team had stuffed something into the core that should have been a plugin.** IGearArbiter is an "arbiter" that decides which method to use for handling problems. According to the system's fundamental principle -- the core should have no built-in capabilities -- it should be a plugin, not part of the core.
 
-The surgery has begun.
+Master called this a "very serious error." In six rounds of research, he had only used that phrase twice.
 
----
-# Chapter 1: Checking Every Wall
+**Second, too much Buddhist decoration.** The system used many Buddhist terms for naming -- the five skandhas (five core categories), klesha (four emotion modules), and so on. Some naming was good: the Moha (delusion) module really does simulate self-deluding behavior.
 
----
+But some naming was a stretch. Master gave an example: "event-driven does not equal mindfulness. Mindfulness just happens to be implemented using event-driven design."
 
-Before the debates began, the research team did something very important -- they each studied independently first, then checked each other's work.
+Event-driven is a style of programming. Mindfulness is a spiritual practice. Saying they're equal is like saying a screwdriver equals repair -- you can use a screwdriver to repair things, but a screwdriver is not repair itself.
 
-## Independent Research
+**Third, the identity problem of the mindfulness monitor.** The system has a component called "SatiMonitor." Sati is the Pali word for "mindfulness." Master asked: "Doesn't this plugin also have elements of vijnana in it?"
 
-Imagine a building. You need to check every wall, every pillar, every wire. You can't just look at the exterior -- you have to look at the structure.
-
-Nine groups went to work separately:
-
-**Five groups checked the building's structure** (how the Five Skandhas work):
-- Are the pillars thick enough? (Are the five root interfaces sufficient?)
-- How are the wires connected? (How does dependency injection work?)
-- How are parts installed? (How do Plugins load?)
-- How do signals flow? (How does the cognitive loop work?)
-- How do different floors communicate? (How do the Five Skandhas interact?)
-
-**Two groups checked the decorations on the walls** (which Buddhist labels should stay, which should be peeled off):
-- ARCHIMEDES audited 7 documents line by line, finding 50 Buddhist mappings -- 23 to keep, 13 to move to appendices, 14 to remove
-- NAGARJUNA and PASCAL created the criteria: three tests (Would the spec change if removed? Is it used in source code? Did it drive a design decision?)
-
-**Two groups studied a special component** -- SatiMonitor:
-- TURING analyzed what it actually does (pure observation, zero side effects, like an ECG machine in a hospital)
-- ASANGA analyzed which skandhas compose it (it has sensation, recognition, judgment -- but no action)
-
-## Cross-Checking
-
-Then they reviewed each other's reports. TURING even went and cross-checked all the code references to make sure nobody had them wrong.
-
-Result: 24 items everyone agreed on. 7 items were disputed, needing to be settled in the debates.
-
----
-# Chapter 2: Which Labels Should Be Peeled Off?
+That question would later change the entire direction of the research.
 
 ---
 
-The first debate (D1) discussed: of all the Buddhist labels stuck on the engineering documents, which should stay and which should be peeled off?
+## Late-Night Conversations
 
-## The Rules Were Simple
+After reading the letter, SUNYATA switched the theater lighting from warm tones to cool white at three in the morning. He didn't tell anyone why.
 
-The team established a set of criteria:
+At four a.m., philosopher NAGARJUNA came on his own. He admitted he had made mistakes in earlier work -- sticking unnecessary Buddhist labels onto engineering documents. "That wasn't mapping. That was decoration."
 
-**Four-tier classification**:
-- **KEEP**: This Buddhist name has engineering significance
-- **RELOCATE**: This Buddhist content has academic value, but doesn't belong in engineering documents -- move it to an appendix
-- **REMOVE**: This is just decoration; removing it doesn't affect anything
-- **FILE REVIEW**: Documents where more than half is decoration need a full re-examination
+At four-thirty, mathematician PASCAL arrived. He wrote a simple formula:
 
-**Three tests**:
-1. If you peel it off, does the engineering spec change? --> If not, peel it off
-2. Is this term used in the source code? --> If yes, keep it
-3. Did this Buddhist concept drive an engineering decision? --> If yes, keep it
+```
+Cost of keeping decoration = every reader x every reading x confusion time = keeps growing
+Cost of removing something useful = search once = controllable
 
-## Voting Results
+Damage from keeping decoration >> Damage from removing
+```
 
-Ten votes. Ten unanimous passes (20/20). Zero minority opinions.
+At five a.m., Buddhist scholar ASANGA came. He proposed a simple test: if a Buddhist concept drove an engineering decision -- keep it. If it was just decoration -- remove it.
 
-This had never happened before in the history of the project.
+Three people. Three disciplines. Three different lines of reasoning -- categorical analysis, quantified harm, causal efficacy -- but the same conclusion: decorative Buddhist mappings should be cleaned out.
 
-Why so united? Because the criteria were built before the debate started. When everyone measures with the same ruler, the results naturally align.
-
-**Peeled off**: Hard rules = precepts? Peel. Soft rules = skillful means? Peel. Event-driven = mindfulness? Peel. These were all Buddhist labels stuck on after the engineering design was finished -- what NAGARJUNA himself called "afterthought labels."
-
-**Kept**: Moha (self-delusion), Sneha (self-attachment), skandha -- these are names actually used in the code, and their functions match their Buddhist definitions.
-
-**Relocated**: Sutra quotations, philosophical comparison tables -- they have academic value, so move them to appendices.
-
-## But There Was a Small Problem
-
-The team also voted to split Doc 16 and Doc 31. Master later overturned these two decisions.
-
-Master explained: "Doc 16 and Doc 31 aren't Buddhist decorations stuck on engineering documents -- they are Buddhist mapping documents by nature. Judging a mapping document by 'too high a decoration ratio' is like complaining that a poem has too much prose. The wrong standard was applied."
-
-The team's framework was missing one dimension -- **document type**. Buddhist content on engineering documents is decoration. Buddhist content in Buddhist mapping documents is the content itself. Big difference.
-
----
-# Chapter 3: What Exactly Is SatiMonitor?
+It was like three doctors using different examination methods -- X-ray, blood test, ultrasound -- and arriving at the same diagnosis. When different methods reach the same conclusion, that conclusion is very likely correct.
 
 ---
 
-The second debate (D2) had to answer Master's question: which of the Five Skandhas make up the SatiMonitor component?
+## The Four-Layer Framework
 
-## First, Figure Out What It Does
+Based on these discussions, SUNYATA established a set of criteria:
 
-SatiMonitor does four things:
-1. **Subscribes to events** -- connects to the system's event stream, continuously receiving 11 different signals
-2. **Remembers history** -- uses a "sliding window" to record what happened recently
-3. **Recognizes patterns** -- spots things like "this behavior is repeating" or "this pattern isn't normal"
-4. **Calculates quality scores** -- produces four scores (continuity, granularity, speed, balance)
+| Action | When |
+|--------|------|
+| **Keep** | Buddhist names that are already part of the code, or design concepts confirmed by Master |
+| **Relocate** | Buddhist content with academic value but not belonging in engineering text -> move to appendix |
+| **Remove** | Purely decorative Buddhist labels |
+| **Full document review** | Documents where the proportion of Buddhist decoration is too high |
 
-What's important is what it **doesn't** do: it doesn't execute any actions, doesn't modify any state, doesn't switch any gears. It's like an ECG machine in a hospital -- it only observes, it doesn't treat.
+Plus three tests:
+1. Would removing it change the design? No -> Remove
+2. Is this name used in the code? Yes -> Keep
+3. Did this Buddhist concept drive a design decision? Yes -> Keep
 
-## Four Proposals
+Then the research split into three tracks running in parallel:
+- **Track A**: Figure out how the five-skandha architecture actually works
+- **Track B**: Audit all Buddhist mappings
+- **Track C**: Redefine the identity of the "mindfulness" component
 
-| Proposal | Skandha Combination | Supporting Reason |
-|----------|-------------------|------------------|
-| A | Vedana + Samjna | Only looks at observation and recognition |
-| **B** | **Vedana + Samjna + Vijnana** | **Observation + recognition + judgment, complete** |
-| C | Samjna + Vijnana | Ignores the observation part |
-| D | Vijnana only | Too oversimplified |
-
-## The Turning Point
-
-At the start of the debate, some worried that "a three-skandha plugin is too complex." But ARCHIMEDES did the math -- going from two skandhas to three only requires adding one array element, roughly a 4-line code difference.
-
-Once this worry was eliminated, the discussion became purely about "whether the classification is accurate." The precision of three skandhas overwhelmingly beat two.
-
-Final vote: **Proposal B (Vedana + Samjna + Vijnana) 18 votes, Proposal C 2 votes.**
-
-SatiMonitor became OpenStarry's first "three-skandha plugin."
-
-## Why Not Include Samskara?
-
-Because "sati" (mindfulness) in Buddhism belongs to samskara -- it is an active, intentional practice activity. But SatiMonitor is passive, automatic quality monitoring. It's not "practicing mindfulness" -- it's just "observing."
-
-This distinction later became very important. In the next chapter, Master would question the entire naming system because of it.
-
----
-# Chapter 4: Can the Building Be Lived In?
+Twenty researchers. Nine independent reports. Then the debates.
 
 ---
 
-The third debate (D3) was the longest -- two hours. The question was straightforward: is the OOP architecture of the Five Skandhas good enough?
+# Chapter 1: Research and Preparation
+
+---
+
+## Nine Reports
+
+Twenty researchers set to work at the same time. Imagine a team of detectives given different assignments, each going off to investigate, then coming back with clues to piece together a puzzle.
+
+**Track A** had the most important task -- Master called it the "top priority": figure out how the five skandhas actually work in the code.
+
+What are the five skandhas? In Buddhism, it's a way of dividing human experience into five categories: rupa (form/the external world), vedana (feeling), samjna (recognition), samskara (action), and vijnana (judgment). OpenStarry borrowed this classification to organize the functions of an AI Agent:
+
+| Skandha | Meaning in the AI Agent | Example |
+|---------|------------------------|---------|
+| Rupa | Receiving external input | Receiving the user's message |
+| Vedana | Sensing good or bad | Judging whether an operation is fast or slow |
+| Samjna | Recognizing what something is | The language model understanding the user's intent |
+| Samskara | Executing actions | Calling tools, searching files |
+| Vijnana | Making judgments and decisions | Deciding which method to use for handling a request |
+
+Twelve researchers spent a great deal of time tracing every connection in the code -- from system startup to receiving events to making decisions to executing actions, the complete flow.
+
+The most interesting finding: vijnana has the most sub-interfaces (four), while samskara has the fewest (just one: ITool). This asymmetry is meaningful -- "judgment" naturally has more dimensions than "action." It's like in real life: making a decision is much more complex than carrying it out.
+
+Control theory expert WIENER redescribed the entire system in his own terms -- the AI Agent is a closed-loop controller: the user's goal is the reference input, context is state feedback, and tool calls are control variables. Mathematician BABBAGE used finite state machines to prove the process always terminates (no infinite loops).
+
+**Track B** was the Buddhist mapping audit. ARCHIMEDES (engineering practice expert) and SCRIBE (recorder) scanned seven documents line by line, finding 50 instances of Buddhist mappings. Their method was mechanical -- they ran the three tests on each mapping and recorded the results in an audit table.
+
+Result: 23 should be kept (nearly half!), 13 should be moved to the appendix, and 14 should be removed.
+
+This showed that not all Buddhist content is decoration. Some are part of the code's identity (like the name of the Klesha module), and some drove design decisions (like the five-skandha classification determining how plugins are organized). But there were indeed 14 purely decorative items -- removing them would not change any engineering specification.
+
+ARCHIMEDES's criterion was precise: "Don't remove the whole table. Remove one column." He didn't use a sledgehammer on a walnut -- he used a scalpel to separate engineering content from Buddhist decoration.
+
+**Track C** was the SatiMonitor identity analysis. Master had asked a key question: which skandhas does this component actually belong to? Four proposals were put forward, each with its own logic. The final answer would be decided in the debates.
+
+---
+
+## Cross-Verification
+
+After the independent research, everyone checked each other's work.
+
+The most important checker was TURING -- the source code analysis expert. He did something extremely tedious but extremely important: he took every code reference cited in the nine research reports and compared them one by one against the actual source code. Over 40 references.
+
+Result: four minor issues (none serious), an error rate below 10%.
+
+He said just six words: "References clean. Ready to debate."
+
+It was like a teacher saying "the exam questions have been confirmed free of typos" before a test -- everyone could answer with confidence.
+
+---
+
+## Preparation Complete
+
+Cross-verification results:
+- 24 points of consensus (things everyone agrees on)
+- 7 open questions (things that need debate)
+- 4 points of disagreement (things that will see real clashes)
+
+24 points of consensus meant the foundation was solid -- the conclusions from all three research tracks had high overlap. 7 open questions meant the debates had clear focus -- they wouldn't be aimless. 4 points of disagreement meant there would be real confrontation -- not just going through the motions.
+
+Three debates awaited them:
+- **D1**: Where are the boundaries for Buddhist mappings? (What stays, what goes)
+- **D2**: What is the true identity of the mindfulness component? (Which skandhas does it belong to)
+- **D3**: Can the five-skandha architecture hold up? (Are five pillars enough)
+
+The pipeline was clear. The operating room was ready.
+
+---
+
+# Chapter 2: D1 -- Ten Unanimous Votes
+
+---
+
+## An Extraordinary Consensus
+
+D1 set a historical record: ten motions, all passed 20 to 0.
+
+In a team of 20 people from 6 different disciplines, this kind of consensus is extremely rare. In the previous Cycle 02-4, fewer than one-third of 55 resolutions passed unanimously. Why could D1 achieve it?
+
+The answer: not because there were no disagreements. But because everyone was measuring with the same ruler.
+
+The four-layer framework and three tests had been established before the debate began. By the time voting came around, there was no need to argue about "what the standard is" -- the standard already existed. All they had to do was hold each case up against it and measure.
+
+It was like an exam where the teacher published the grading rubric ahead of time. When every student knows what the criteria are, arguments naturally decrease -- no need to fight over "how many points should this answer get," just compare against the rubric.
+
+---
+
+## Clearing Out Decorative Labels
+
+Fifty Buddhist mappings were processed in three batches.
+
+First batch: the five mappings Master had criticized. All removed.
+
+Philosopher NAGARJUNA did something he had never done before -- admitted his mistake in first person:
+
+"Hard Rules don't need to be called sila (precepts). Their function is rule enforcement, not spiritual practice. Labeling them with Buddhist terminology isn't explaining their function -- it's adding decoration."
+
+He used a precise phrase: "post-hoc labeling." Meaning -- these Buddhist terms weren't there from the design phase. They were added after the fact.
+
+Mathematician PASCAL wrote a formula in his notebook: when the creator of the label themselves admits it's decoration, the probability approaches 100%. No further evidence needed.
+
+---
+
+## Scalpel-Precision Separation
+
+Second batch: eight mappings with academic value but not belonging in the main text. All relocated to the appendix.
+
+ARCHIMEDES gave a precise demonstration: in one document, PASCAL's mathematical formulas had independent engineering value (kept in the main text), while a Buddhist scripture reference beside them was design background (moved to the appendix).
+
+"Keep the math, move the Buddhism." The boundary between engineering content and Buddhist content was cut open with a scalpel, each placed where it belongs.
+
+Not discarding -- relocating. Buddhist content has its value. It just shouldn't appear in engineering body text. Put it in the appendix, and anyone who wants to read it can find it anytime.
+
+---
+
+## The Identity of Code
+
+Third batch: seven Buddhist names that had already become part of the code. All kept.
+
+This batch was completely different from the first two. The first two were "labels stuck on the outside." This batch was "names grown on the inside."
+
+TURING didn't speak. He just ran a search command on the screen.
+
+Result: 17 files. Moha (delusion) appeared in import statements, in class definitions, in tests. It wasn't a label stuck onto the code -- it was part of the code itself. Renaming would mean changing 17 files.
+
+Taxonomist LINNAEUS confirmed: "These names have become part of the system's identity. Moha isn't a label stuck on something. Moha is that thing's name."
+
+---
+
+## Two Seeds
+
+D1 also decided the fate of two special documents -- Doc 16 (80% Buddhist mappings) and Doc 31 (70% Buddhist mappings). The team voted to split them apart: extract the paragraphs with engineering value and delete or downgrade the rest. Passed 20/20.
+
+But this decision was later overturned by Master.
+
+The reason wasn't that the team judged incorrectly -- they used the wrong standard. The team's framework distinguished between "engineering content" and "Buddhist decoration," but it didn't distinguish between "engineering documents with embedded Buddhism" and "documents that are themselves Buddhist mapping documents."
+
+Doc 16 isn't an engineering document with Buddhism embedded in it. Doc 16 is itself a mapping document -- judging it by "80% decoration ratio" is like judging a poem by "80% prose ratio." Wrong standard for the job.
+
+But this insight wouldn't arrive until later.
+
+---
+
+# Chapter 3: D2 -- Mindfulness Is Not Mindfulness
+
+---
+
+## An Identity Crisis for a Component
+
+D1 settled the boundary question for Buddhist mappings. D2 had to answer a completely different question: SatiMonitor -- the component that monitors the behavioral quality of an AI Agent -- which skandha categories does it actually consist of?
+
+Why does this matter? Because skandha classification determines a component's position in the system, what it can do, and what it cannot. Getting the classification wrong is like categorizing a thermometer as a "heater" -- your expectations and its actual capabilities would be completely mismatched.
+
+Sounds abstract. Let me use an analogy.
+
+Imagine you installed a surveillance camera in a school hallway. This camera can:
+- **See** students passing by (sensing = vedana)
+- **Recognize** what they're doing -- walking, running, fighting (recognition = samjna)
+- **Judge** the quality of the behavior -- normal, abnormal, dangerous (judgment = vijnana)
+
+But there's one thing it **cannot** do: take action. It can't stop students, can't open doors, can't hit an alarm. It can only observe and report.
+
+So it has no samskara (action) component.
+
+---
+
+## Three Mirrors
+
+Three researchers reached the same conclusion from three entirely different angles:
+
+**First mirror** -- Taxonomist LINNAEUS listed SatiMonitor's four functions and matched each to a skandha definition. Three functions corresponded to vedana, samjna, and vijnana respectively. The fourth function (sliding window) was just a technical implementation detail that didn't affect classification.
+
+**Second mirror** -- Control theory expert WIENER asked a sharper question: "Remove which skandha, and SatiMonitor stops being SatiMonitor?" The answer was that none of the three could be removed -- take away any one, and it degrades into a crippled system.
+
+**Third mirror** -- Runtime dynamics expert HERACLITUS confirmed from a "degradation mode" perspective -- if you remove vedana, SatiMonitor becomes a log recorder. Remove samjna, it becomes a raw counter. Remove vijnana, it becomes an evaluation-free statistics report.
+
+Three mirrors, same conclusion: vedana + samjna + vijnana.
+
+---
+
+## The Zero-Cost Turning Point
+
+Someone challenged: vedana's role in SatiMonitor is too thin. Does it really "feel" anything?
+
+ASANGA (Buddhist scholar) gave a convincing response: "When SatiMonitor receives events, it isn't just passively receiving them. An operation taking 100 milliseconds versus taking 10 seconds will produce different quality judgments from SatiMonitor. The basis for that judgment is -- feeling. The feeling of speed, the feeling of continuity. Feeling is the core of vedana."
+
+But what truly ended the debate was a single line from ARCHIMEDES (engineering practice expert):
+
+"If SatiMonitor declares itself composed of three skandhas, what is the engineering cost?"
+
+Answer: zero.
+
+Skandha declarations are just metadata -- supplementary information. Declaring three skandhas versus two doesn't change any code. Zero cost, greater precision -- why wouldn't you choose it?
+
+**Passed 18/20.**
+
+This was the first three-skandha component in OpenStarry history. Previously, all components belonged to just one or two skandhas. SatiMonitor's three-skandha composition meant it was a more complex observer than any other component -- it doesn't just see; after seeing, it also recognizes and evaluates.
+
+The third vote that followed was even simpler: can an Agent load multiple monitors? Yes. PluginHooks adds an array slot: `monitors?: ISatiMonitor[]`. Different monitors can focus on different aspects -- just like a school can have multiple surveillance cameras serving different purposes. **Passed 20/20 unanimously.**
+
+---
+
+## A Question That Was Never Asked
+
+When D2 ended, recorder SCRIBE wrote down an observation.
+
+The three tests asked many things: Does the mapping have engineering value? Is the name used in the code? Did the concept drive a design decision?
+
+But none of the tests asked: **Does the name match its definition?**
+
+If SatiMonitor does not contain samskara -- and mindfulness (Sati) in Buddhism is an activity of samskara -- then why is SatiMonitor called "Sati"?
+
+Nobody asked this question during D2.
+
+It was waiting for someone to ask.
+
+---
+
+# Chapter 4: D3 -- Testing the Building
+
+---
+
+## Can the Building Stand?
+
+D3 was an exam. The student wasn't a person -- it was a building.
+
+The question: can the five-skandha OOP architecture support real engineering implementation?
+
+To make the analogy concrete: imagine you built a house using five pillars. Someone asks, "Are these five pillars enough? Is one missing?"
+
+D3 was answering that question.
+
+---
 
 ## Five Pillars
 
-The system has five root interfaces (like a building's five main pillars):
+Are the five root interfaces -- IRupa (form), IVedana (feeling), ISamjna (recognition), ISamskara (action), IVijnana (judgment) -- enough?
 
-| Pillar | What It's Responsible For |
-|--------|--------------------------|
-| IRupa (Form) | Input and output |
-| IVedana (Sensation) | Feeling |
-| ISamjna (Perception) | Recognition and processing |
-| ISamskara (Volition) | Executing actions |
-| IVijnana (Consciousness) | Judgment and decision-making |
+Four researchers answered the same question from four completely different angles:
 
-Are five pillars enough? Four experts verified this using four different methods -- taxonomy, mathematics, Buddhist studies, operating systems -- and reached the same conclusion: **Enough. Passed 20/20.**
+- **LINNAEUS** (taxonomist): Counted all the functional hooks in the system (9 total). Every single one was covered by at least one pillar. No gaps.
+- **BABBAGE** (mathematician): Proved the completeness of the classification space using mathematics.
+- **ASANGA** (Buddhist scholar): Confirmed from the Buddhist perspective -- the five skandhas were designed 2,500 years ago as a "complete classification." Rupa, vedana, samjna, samskara, and vijnana exhaust all experience.
+- **KERNEL** (operating systems expert): The five skandhas map to five operating system subsystems -- input, sensing, classification, execution, and control.
 
-## An Interesting Exception
+Four independent arguments, from four completely different fields. When a taxonomist, a mathematician, a Buddhist scholar, and an operating systems expert all say "five pillars are enough" -- you can believe it.
 
-One component -- SlashCommand -- doesn't belong to any skandha. Why? Because it bypasses the entire cognitive loop and executes directly. It's like sneezing -- it happens without your brain thinking about it.
-
-But GUARDIAN raised a security concern: if a plugin does something dangerous through SlashCommand, none of the system's safety mechanisms can block it. This issue was documented in a new design document.
-
-## The Biggest Debate: Can Ancient Buddhist Theory Map to Code?
-
-The most heated of the six votes was: can the Twelve Links of Dependent Origination (a Buddhist theory) be mapped to the system's execution loop?
-
-- **Opposition** (7 votes): The Twelve Links describe "causation across three lifetimes" -- spanning past, present, and future lives. A single loop in the program takes only milliseconds. The scales are completely different.
-- **Support** (13 votes): Don't do a full mapping; just document the parts that overlap as reference material.
-
-Result: 13/20, selective appendix mapping.
-
-But another theory -- the "cognitive sequence" (citta-vithi) -- received higher support at 17/20. That's because it describes "the internal stages of a single cognitive event" -- matching the scale of the program's cognitive loop. BABBAGE even proved mathematically that the two structures can correspond.
-
-## Conclusion
-
-**The building can be lived in.** The five pillars are solid, the wiring is correct, the structure is complete. There are three small gaps (weak inheritance, incomplete wiring, two unimplemented components), but these are "floors not yet built," not "cracked pillars."
-
----
-# Chapter 5: Does Your Name Live Up to You?
+**Passed 20/20 unanimously.**
 
 ---
 
-This was the most important debate of the entire Cycle 02-5 -- D4. It wasn't in the original plan. It was triggered by one sentence from Master:
+## The Narrowest Pillar
 
-> **"If you use Sanskrit, you must be accountable to its definitions."**
+The most honest segment of D3 was about samskara.
 
-## The Problem with Names
+In Buddhist tradition, samskara encompasses 49 types of mental activities -- volition, effort, faith, shame... almost everything falls under samskara. But in OpenStarry, samskara has only one interface: ITool (tool execution).
 
-In Chapter 3, we learned that SatiMonitor doesn't include samskara. But "Sati" in Buddhism means "mindfulness" -- and mindfulness belongs to samskara.
+Buddhist scholar ASANGA acknowledged the gap: "OpenStarry's samskara design has the biggest divergence from Buddhist tradition. In tradition, samskara is the widest pillar. In OpenStarry, samskara is the narrowest."
 
-So here's the question:
+Why? Because in a software system, the definition of "action" is much narrower than in Buddhism. Samskara = what is being done (executing tools). Vijnana = deciding what to do (judgment and deliberation). The two operate at different stages.
 
-If SatiMonitor is **not** a samskara activity --> then it is **not** mindfulness --> then why is it called **Sati**?
+Philosopher NAGARJUNA's concession carried deep reflection: "Buddhist categories are based on a practitioner's introspection. But OpenStarry is not a practitioner. The categories for a software system should be based on function, not on contemplative practice."
 
-NAGARJUNA used a logical proof (he called it "reductio ad absurdum") to lay out this contradiction:
+**20/20.** But with a condition -- this divergence must be documented as a conscious design choice.
+
+---
+
+## Twelve Links and the Cognitive Sequence
+
+D3 also discussed whether two ancient Buddhist models could be mapped to OpenStarry's execution flow.
+
+**The Twelve Links of Dependent Origination** -- in Buddhism, the complete causal chain describing the cycle of birth and death. Mathematician BABBAGE tried to find a mathematical correspondence between it and the AI Agent's ExecutionLoop -- and failed. The reason: the twelve links describe causation spanning an entire lifetime. The ExecutionLoop describes cognitive processing in tens of milliseconds. The scales are too different.
+
+**The Cognitive Sequence** -- in Buddhism, the complete process of a single thought arising and passing away. BABBAGE tried again -- and this time succeeded. The cognitive sequence and the ExecutionLoop operate at the same scale, and he found a mathematical "structural correspondence" -- every state in one system has a corresponding state in the other.
+
+"This isn't a metaphor," BABBAGE said. "This is mathematics."
+
+He voted against the twelve links and for the cognitive sequence. In his notes he wrote: "Quality determines votes."
+
+---
+
+## Master's Ruling
+
+After D3 ended, Master's review arrived.
+
+He confirmed most of the resolutions. But he overturned two -- the D1 decisions to split Doc 16 and Doc 31.
+
+Master's reasoning was concise and powerful: these two documents are not "engineering documents with embedded Buddhism." They are themselves "Buddhist mapping documents" -- their purpose for existing is to provide systematic parallels from Buddhism to engineering. Evaluating a mapping document by engineering document standards -- wrong standard.
+
+It's like you can't judge a poem by its "prose ratio." A poem is a poem. A mural on a wall is decoration -- you can remove it without affecting the wall's structure. But a painting hanging in a gallery is not wall decoration -- the painting is the content itself.
+
+ARCHIMEDES re-examined his audit table and admitted a key assumption error: "The numbers were correct. But the premise was wrong." He added a new column to his audit table -- "document type." Of the seven audited documents, five were engineering documents and two were mapping documents. The first five could be evaluated with the three tests; the last two could not.
+
+The team accepted the ruling and added a new preliminary check to the framework: before applying the three tests, first confirm the document type. Engineering documents get the three tests. Mapping documents get different criteria. The three tests weren't invalidated -- they simply gained a scope condition.
+
+But Master's review contained one more sentence, pointing in an entirely different direction:
+
+**"When you use Sanskrit, you are responsible for its definition."**
+
+The full weight of that sentence wouldn't be felt until the next debate.
+
+---
+
+# Chapter 5: D4 -- Does Your Name Live Up to You?
+
+---
+
+## The Question
+
+SUNYATA projected Master's words onto the screen. Large letters. Black text on white.
+
+> **"When you use Sanskrit, you are responsible for its definition. Do you think Sati's content is a complete match?"**
+
+This was the most central question of the entire Cycle 02-5.
+
+---
+
+## A Logical Deduction
+
+Philosopher NAGARJUNA stood up. He wrote three lines on the whiteboard:
 
 ```
-SatiMonitor is not samskara (proven in D2)
-Mindfulness is samskara (Buddhist definition)
-Therefore SatiMonitor is not mindfulness
-Therefore it should not be called Sati
+Premise 1: Mindfulness (Sati) in Buddhism is an activity of samskara
+Premise 2: SatiMonitor does not belong to samskara (D2 already proved this)
+Conclusion: SatiMonitor is not mindfulness
 ```
 
-## The First Rename: ISatiMonitor --> ILoopQualityMonitor
+"If mindfulness is necessarily an activity of samskara, and SatiMonitor is not samskara -- then SatiMonitor is not mindfulness."
 
-Vote: 13/20. The new name means "Loop Quality Monitor" -- it precisely describes what this component does.
+He put down the pen.
 
-## The Second Rename Was Even More Striking
+"Why is something that is not mindfulness called Sati?"
 
-SUNYATA brought up another name: **IPrajna**.
+The room went silent. Not because anyone disagreed -- but because everyone simultaneously understood something they should have understood sooner.
 
-What is Prajna in Buddhism? **The highest wisdom. The ability to see the true nature of all things.**
+---
 
-What does IPrajna do in the code? **It adds or subtracts 0.05 to a number.**
+## Five Inconsistencies
 
-ASANGA said something everyone remembered:
+Buddhist scholar ASANGA brought out a comparison table:
 
-> **"This is like calling a temperature fine-tuning knob a nuclear fusion reactor."**
+| | Mindfulness in Buddhism | SatiMonitor |
+|--|------------------------|-------------|
+| Active or passive? | Active (requires effort) | Passive (runs automatically) |
+| Has a moral direction? | Yes (morally positive) | No (value-neutral) |
+| Requires intention? | Yes | No |
+| Which skandha? | Samskara | Vedana + Samjna + Vijnana |
+| Status? | Seventh factor of the Noble Eightfold Path | A quality monitor |
 
-Nobody laughed. Because he was telling the truth.
+Five aspects. All five inconsistent.
 
-Vote: **IPrajna --> IConfidenceAuditor**, 16/20. The new name means "Confidence Auditor" -- it honestly describes what this component actually does.
+"We made an error," ASANGA said. "Not a classification error -- the classification was correct. It was a naming error. We used this name for so long that we got used to it and forgot to check whether the name itself was right."
+
+---
+
+## The New Name
+
+SUNYATA asked: "Then what should it be called?"
+
+Among four proposals, ARCHIMEDES's (engineering practice expert) received the most support:
+
+**ILoopQualityMonitor** -- loop quality monitor.
+
+The reasoning was straightforward: "A new engineer seeing this name immediately knows what it does -- monitors loop quality. No Buddhism. No metaphors. No history that needs explaining."
+
+**Passed 13/20.**
+
+---
+
+## The Nuclear Fusion Reactor
+
+Then SUNYATA said two words: "IPrajna."
+
+IPrajna is another interface named with a Buddhist term. Prajna (prajña) in Buddhism is the highest wisdom -- transcendent cognition that sees the true nature of all things.
+
+NAGARJUNA wrote two lines on the whiteboard:
+
+```
+Prajna (Buddhism): The highest wisdom that sees the true nature of all phenomena
+IPrajna (engineering): A function that adds or subtracts 0.05 from a confidence score
+```
+
+ASANGA said something that everyone would remember afterward:
+
+"That's like calling a temperature fine-tuning knob a 'nuclear fusion reactor.'"
+
+Nobody laughed. Because he was stating a fact.
+
+What does IPrajna do? It receives a confidence number, adds or subtracts at most 0.05, then returns the result. A fine-tuner. A clamp. The distance between this and "seeing the true nature of all phenomena" is like the distance between a knob and nuclear fusion.
+
+**Passed 16/20: IPrajna -> IConfidenceAuditor (confidence auditor).**
+
+---
 
 ## The Fourth Test
 
-D4 produced a new permanent rule -- the **Definition Accountability Test**:
+D4 didn't just change two names. It also created a new testing standard.
 
-> When you name a program component with a Buddhist term, the component's function must truly match the meaning of that Buddhist term. If it doesn't, use a plain engineering name.
+Before D4, the team had three tests (necessity, code identification, decision-driving). But these three tests had a blind spot -- they never asked: "Does the name match its definition?"
 
-Which names passed this test? **Moha** (self-delusion -- the code really does simulate self-delusion). **Skandha** (aggregate -- the code really does perform Five Skandha classification).
+ISatiMonitor passed Test 2 (it's used in the code). But it failed a more fundamental standard -- its name and its function don't match.
 
-Which names didn't pass? **Sati** (mindfulness -- but SatiMonitor isn't doing mindfulness). **Prajna** (the highest wisdom -- but IPrajna just adds or subtracts 0.05).
+So the team added a fourth test:
 
-Names are not free. Borrowing a great name for an ordinary function -- that doesn't make the function great; it only cheapens the name.
+> **Test 4 (Definition Responsibility): When you use a Buddhist Sanskrit term as a code name, does the component's function truly match the meaning of that Buddhist term? If not, use an engineering term.**
 
----
-# Chapter 6: A Debate That Didn't Need Buddhism
+Using this standard to re-examine Doc 03 (`Sila_Prajna_Security_Framework.md`) -- Sila (precepts) used to mean "access control"? Prajna (prajña) used to mean "security vulnerability response mechanism"? All four tests failed.
 
----
-
-The fifth debate (D5) was completely different from the previous four.
-
-No Buddhism. No Sanskrit. No philosophical arguments. Just engineering.
-
-## Why Was It Different?
-
-Because D5 discussed: the precise technical specifications for IConfidenceAuditor (the component that was just renamed). Master said: "The spec must be 100% complete, then hand it to the engineering team to build."
-
-So only 10 engineering-related researchers participated. Buddhist scholars NAGARJUNA and ASANGA voluntarily stepped out -- because this debate didn't need Buddhist analysis.
-
-## Nine Engineering Questions
-
-TURING (the source code expert) had prepared a thorough "code archaeology" report beforehand -- studying 14 source code files and documenting all of the system's existing design patterns. With this report in hand, every question had a factual basis.
-
-The nine questions included:
-- Where does the new component go? --> Its own dedicated slot (not shared with anything else)
-- Return type? --> Synchronous or asynchronous, either works (consistent with existing design)
-- Timeout? --> 200 milliseconds; if it times out, treat it as no adjustment made
-- Can you install multiple? --> No, one is enough (YAGNI principle -- don't build what you don't need)
-- Weights for quality scores? --> Each of the four dimensions gets 25% (equal weights are safest when there's no data yet)
-
-Nine votes, seventy-five minutes to complete. The final output was a complete specification that engineers could immediately start coding from.
-
-## NAGARJUNA's Comment
-
-After D5 ended, NAGARJUNA walked up to TURING and said:
-
-"D4 proved that names must be accountable to their definitions. D5 proved that some engineering questions don't need definitions at all -- they just need specifications."
-
-Two sentences that captured the essence of two debates.
-
----
-# Final Chapter: The Scale
+**Passed 17/20: Doc 03 renamed to Plugin Security Lifecycle.**
 
 ---
 
-Five debates concluded. 31 votes. 29 formal resolutions. 375 minutes.
+## The Scale
 
-## What Was Accomplished?
+D4 took only thirty minutes. But it was the climax of the entire Cycle 02-5.
 
-**Built a new document (Doc 45)** -- explaining the complete Five Skandha system architecture in pure engineering language. How the five root interfaces are organized, how dependency injection wires things up, how Plugins load, how the cognitive loop works, how the Five Skandhas interact. Every one of Master's questions was answered.
+The previous three tests asked: "Is this Buddhist concept useful to engineering?" -- from Buddhism toward engineering.
 
-**Peeled off labels that shouldn't have been there** -- 14 decorative Buddhist mappings were removed. 8 pieces of academically valuable content were moved to appendices.
+The fourth test asks: "Is this engineering name faithful to the Buddhist definition?" -- from engineering toward Buddhism.
 
-**Renamed names that didn't match reality** -- ISatiMonitor was renamed to ILoopQualityMonitor (Loop Quality Monitor). IPrajna was renamed to IConfidenceAuditor (Confidence Auditor).
+Imagine a scale. The name on one end, the definition on the other.
 
-**Kept names that did match reality** -- Moha, Sneha, skandha, vedana, and others -- their functions truly match their Buddhist definitions.
+When balanced -- the Moha (delusion) module really does simulate deluding behavior -- the name stays.
+When unbalanced -- SatiMonitor is not mindfulness, IPrajna is not prajña -- the name gets replaced.
 
-**Established permanent rules** -- a four-tier framework, four tests, the most important being Test 4 (Definition Accountability): when naming a program component with a Buddhist term, the function must match the definition.
+The scale doesn't care how old or how revered a name is. The scale only cares whether both ends balance.
 
-## What Was Learned?
-
-Cycle 02-5 was like a scale.
-
-On one side of the scale were **names**. On the other side were **definitions**.
-
-Some names balanced with their definitions -- Moha (self-delusion) truly does simulate self-delusion. The scale was level. Keep.
-
-Some names didn't balance with their definitions -- Sati (mindfulness) but SatiMonitor wasn't doing mindfulness. The scale tipped. Rename.
-
-Some names were severely imbalanced with their definitions -- Prajna (the highest wisdom) but IPrajna just adds or subtracts 0.05. The scale nearly flipped over. Decisively renamed.
-
-The rule of the scale is simple: **Names are not free. Every great name is a promise -- a promise that what you do lives up to that name.**
-
-If it lives up to it -- use it.
-
-If it doesn't -- choose an honest name instead.
-
-That is the conclusion of Cycle 02-5.
+PASCAL's summary: "Master said it in one sentence. We took a full debate. The conclusion was the same. But the value of the debate is -- it explains why."
 
 ---
 
-## Numbers at a Glance
+# Chapter 6: D5 -- A Debate Without Buddhism
 
-| Item | Value |
-|------|-------|
-| Debate sessions | 5 (3 planned + 2 unplanned) |
-| Formal resolutions | 29 + 6 supplementary |
-| Unanimous vote rate | 66% (all-time high) |
-| Mappings removed | 14 |
-| Content relocated | 13 |
-| Names kept | 23 |
-| Interfaces renamed | 2 |
-| Rename replacements | 120+ |
-| New documents | Doc 45 + 3 appendices |
+---
+
+## Ten People, Zero Buddhist Scholars
+
+D5 was a special debate.
+
+Only ten participants -- and no Buddhist scholars. NAGARJUNA and ASANGA voluntarily stepped out. NAGARJUNA's parting words were interesting: "D4 proved that names must be accountable to their definitions. D5 will prove that engineering design can be completed without Buddhist names. Both of these things are equally important."
+
+D5's topic was a purely engineering question: take the interfaces renamed in D4 and design them into complete, executable specifications. Master's requirement was "get the specification to 100%, then hand it off to the engineering team."
+
+---
+
+## Code Archaeology
+
+TURING prepared a special report for D5 -- he analyzed every design pattern across 14 source code files. What is each timeout set to? How does each Registry work? What happens when each one fails?
+
+He called this report "code archaeology."
+
+This report changed the way the debate worked. Previous debates were built on "principles" -- and principles can be interpreted differently. But TURING's report was built on "facts" -- and facts only have one version.
+
+---
+
+## Nine Decisions
+
+D5 made nine votes in seventy-five minutes. It moved quickly -- because every item had a factual foundation.
+
+The most important decisions:
+
+**IConfidenceAuditor gets its own dedicated slot.** Not shared with monitors. Reason: monitors only observe (no side effects), while auditors call AI models (has side effects). Observers and side-effect-producing components shouldn't be mixed together. Passed unanimously.
+
+**Return type uses dual mode.** Can be either synchronous or asynchronous. This was D5's closest vote -- 5 to 3. The disagreement wasn't about "is dual mode good or not," but about "should we break the existing design pattern." In the end, "consistency" won -- because in engineering, staying consistent with existing code is usually more important than chasing perfection.
+
+**Timeout: 200 milliseconds.** If the audit doesn't respond within 200 milliseconds, skip it (don't modify the confidence score). Consistent with the existing gear arbiter. Passed unanimously.
+
+**Only one auditor allowed.** No complicated multi-auditor aggregation strategies. Following the YAGNI principle -- You Ain't Gonna Need It (don't build what you don't need yet). Passed 6 to 2.
+
+**Equal weights.** The quality vector's four dimensions -- continuity, granularity, speed, and balance -- each at 0.25. Control theory expert WIENER said: "When you have no runtime data, equal weights are the most conservative choice." Passed unanimously.
+
+---
+
+## The Final Specification
+
+After nine votes, TURING wrote the final interface on the whiteboard:
+
+```typescript
+export interface IConfidenceAuditor extends IVijnana {
+  readonly id: string;
+  audit(confidence: number, context: GearContext):
+    ConfidenceAuditResult | Promise<ConfidenceAuditResult>;
+}
+
+export interface ConfidenceAuditResult {
+  delta: number;       // clamped to [-0.05, +0.05]
+  reasoning: string;   // audit log
+}
+```
+
+"100%," he said.
+
+This was not a concept design. This was a complete specification that an engineer could open their code editor and start implementing right away.
+
+---
+
+## Zero Buddhism
+
+Recorder SCRIBE tallied the number of times Buddhist terms were used in the entire D5 debate.
+
+Zero.
+
+D5 was the first debate in this project's history with absolutely no Buddhist content. Not deliberately avoided -- it was a natural result. When you're discussing timeout values and failure handling strategies, you don't need to cite any Buddhist scriptures.
+
+NAGARJUNA came over after the debate ended and said: "D4 proved that names must be accountable to their definitions. D5 proved -- some engineering problems don't need definitions at all. They just need specifications."
+
+This isn't contradictory -- it's two sides of the same scale. One side asks, "Does your name live up to its definition?" The other asks, "Is your specification precise enough?" D4 calibrated the first side. D5 completed the second.
+
+Both sides are needed. Neither can be missing.
+
+---
+
+# Chapter 7: The Boundary Between Two Languages
+
+---
+
+## The New Document
+
+After the debates ended, there was still one important thing left to do -- turn all the resolutions into documents.
+
+Doc 45 was the most important deliverable of the entire Cycle 02-5. It answered every question Master asked in his letter:
+
+| Master's Question | Where the Answer Is |
+|-------------------|-------------------|
+| What subcategories do the five skandhas have? | Doc 45 Section 1 |
+| How does dependency injection get wired? | Doc 45 Section 5 |
+| How are plugins loaded? | Doc 45 Sections 2 and 4 |
+| How do the five skandhas flow and interact? | Doc 45 Sections 6 and 7 |
+
+All in engineering language. Every answer backed by source code references, every reference verified by TURING.
+
+---
+
+## The Great Cleanup
+
+The cleanup work happened at the same time. Over 120 document modifications.
+
+- ISatiMonitor -> ILoopQualityMonitor: six documents, 100+ replacements
+- IPrajna -> IConfidenceAuditor: five documents
+- Doc 03 renamed and cleaned up
+
+TURING did it line by line. Each replacement required checking the context -- blind search-and-replace was not an option. Some instances of "Sati" appeared in design rationales and required judgment about whether to replace with the new name or preserve as historical record.
+
+ARCHIMEDES verified alongside him. SCRIBE recorded from another station.
+
+This wasn't the most glamorous work. But it was the most important "last mile."
+
+---
+
+## The Answer to One Question
+
+The entire Cycle 02-5 answered one core question:
+
+**In a system that uses both Buddhist and engineering languages, where is the boundary between the two?**
+
+The answer can be summed up in three rules:
+
+**Rule One: Code names may use Buddhist terms -- but the name must live up to its definition.**
+
+The Moha (delusion) module truly simulates delusion -> keep.
+SatiMonitor is not mindfulness -> rename.
+
+**Rule Two: Design rationale may cite Buddhist concepts -- but they must have truly driven engineering decisions.**
+
+"The four kleshas arise simultaneously" drove the atomicity design -> keep.
+"Event-driven = mindfulness" didn't drive any design -> remove.
+
+**Rule Three: Mapping documents may exist -- but engineering documents should not have Buddhist decoration.**
+
+Doc 16 (is itself a mapping document) -> keep.
+The "Buddhist mapping" column in Doc 38 (decoration in an engineering document) -> remove.
+
+---
+
+## The Numbers
+
+Let's look at the scale of the entire Cycle 02-5:
+
+| Metric | Value |
+|--------|-------|
+| Debate sessions | 5 (3 scheduled + 2 unplanned) |
+| Formal resolutions | 29 |
+| Total votes cast | 31 |
+| Unanimous pass rate | 66% (all-time high) |
+| Total debate duration | 375 minutes (over 6 hours) |
+| Documents modified | 8+ |
+| Name replacements | 120+ |
+
+The 66% unanimity rate was the highest ever -- not because there were no disagreements (the twelve links in D3 passed only 13/20), but because the four-layer framework and four tests provided a common standard. When everyone measures with the same ruler, measurements naturally converge.
+
+Doc 45 is the core answer: five interfaces. Nine registries. One loop. Pure engineering.
+
+The four tests are a permanent tool: necessity, code identification, decision-driving, definition responsibility.
+
+---
+
+## The Cost of a Name
+
+NAGARJUNA read through Doc 45 one last time. After finishing, he said:
+
+"The names that were changed -- ISatiMonitor, IPrajna -- they weren't bad names. They were misplaced names. Mindfulness is a great concept. Prajna is a great concept. But great concepts should not be used to name mediocre functions."
+
+ASANGA added: "When you call a plus-or-minus-0.05 fine-tuner prajna, you don't just diminish prajna -- you also mislead people about what the function does. A new engineer seeing IPrajna would think it's some profoundly sophisticated component. They open the code and find -- a clamp function. The gap between expectation and reality -- that's the cost of a name."
+
+But not all names were changed. Moha, Drishti, Mana, Sneha, skandha, vedana -- all of these were kept. Because they passed the fourth test. Name and function aligned. The scale balanced.
+
+---
+
+SUNYATA was the last to leave the theater. Only one line remained on the whiteboard:
+
+> **A name is not free. Every Buddhist name is a promise -- a promise that function matches definition. If you cannot keep the promise, don't borrow the name.**
+
+The lights returned to neutral white. The theater fell quiet, waiting for the next time it would be lit.
+
+Cycle 02-5 used five debates to answer what seemed like a simple question: how do the five skandhas work in an AI Agent?
+
+But the more important answer was: **When you build a building using two languages -- make sure the name carved on every brick lives up to what's inside.**
 
 ---
