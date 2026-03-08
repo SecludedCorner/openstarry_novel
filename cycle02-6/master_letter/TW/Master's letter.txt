@@ -1,0 +1,36 @@
+佛教用語/梵文使用條件（兩者皆須滿足）：
+1. 系統性規劃 — 有完整的架構設計，非零散裝飾
+2. 意義完全符合 — 工程功能與佛學定義真正對應
+
+另外我在此嚴厲申明，我並沒有刻意要窄化行蘊。
+唯識學派，將大部分的心所歸于行蘊，我覺得非常有問題，原始佛經並沒有這樣做。
+我想這可能是將心理有活動與轉換就歸于行蘊有關。
+但不代表心所沒有其他蘊的特質，例如想蘊與識蘊。
+但我們確實可以用，活動與轉換，的觀念來拓展其類別。
+我更期待研究團隊，透過，經(如是我聞)，來深掘行蘊的意義與價值。
+而且我裁定行蘊保持開放，這完全就是拓寬的無限的可能。
+
+五蘊、名色識、十二因緣、八識、四智
+這些關於心智運轉的論述，原始經典中都是值得借鑒與參考的。
+
+唯識學派對於心所的整理，具備參考價值，但我們應該謹慎對待。
+
+----------
+
+master letter完成了，research input\master_letters\cycle02-6\Master's letter.txt
+
+研究cycle02-6
+參考文件
+research input\prior_research\cycle02-6\
+research input\research_version\cycle02-5_v0.29.0-alpha\
+research input\engineering_delivery\cycle02-5_plan29/
+research input\master_letters\cycle02-6\
+
+openstarry_doc最新的在
+research input\research_version\cycle02-5_v0.29.0-alpha\openstarry_doc
+
+上一個版本的交付
+research record\cycle02-5\deliver\
+research record\cycle02-5\todo\
+
+

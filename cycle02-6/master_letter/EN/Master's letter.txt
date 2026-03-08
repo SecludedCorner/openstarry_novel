@@ -1,0 +1,36 @@
+Conditions for using Buddhist terminology / Sanskrit (both must be met):
+1. Systematic planning — there is a complete architectural design, not scattered decoration
+2. Meaning fully corresponds — the engineering function genuinely matches the Buddhist definition
+
+Additionally, I want to state emphatically here: I have no intention of deliberately narrowing Saṅkhāra-skandha (the aggregate of volitional formations).
+The Yogācāra school classified most mental factors (caitta) under Saṅkhāra-skandha, which I find highly problematic — the original sūtras (āgama) did not do this.
+I suspect this stems from the tendency to categorize anything involving mental activity and transformation as belonging to Saṅkhāra-skandha.
+However, this does not mean that mental factors lack qualities of other aggregates, such as Saññā-skandha (perception) and Vijñāna-skandha (consciousness).
+That said, we can indeed use the concepts of "activity and transformation" to expand its categories.
+What I look forward to more is the research team going deeper into the meaning and value of Saṅkhāra-skandha through the sūtras (Evaṃ me sutaṃ — "Thus have I heard").
+Moreover, I have ruled that Saṅkhāra-skandha remains open — this is precisely what allows for unlimited possibilities of expansion.
+
+The Five Aggregates (Pañca-skandha), Nāma-rūpa-vijñāna, the Twelve Links of Dependent Origination (Dvādaśa-nidāna), the Eight Consciousnesses (Aṣṭa-vijñāna), and the Four Wisdoms (Catuḥ-jñāna) —
+these discourses on the workings of the mind are all worthy of reference and study in the original scriptures.
+
+The Yogācāra school's organization of mental factors has reference value, but we should approach it with caution.
+
+----------
+
+The master letter is complete: research input\master_letters\cycle02-6\Master's letter.txt
+
+Research cycle02-6
+Reference materials:
+research input\prior_research\cycle02-6\
+research input\research_version\cycle02-5_v0.29.0-alpha\
+research input\engineering_delivery\cycle02-5_plan29/
+research input\master_letters\cycle02-6\
+
+The latest openstarry_doc is at:
+research input\research_version\cycle02-5_v0.29.0-alpha\openstarry_doc
+
+The previous version's delivery:
+research record\cycle02-5\deliver\
+research record\cycle02-5\todo\
+
+

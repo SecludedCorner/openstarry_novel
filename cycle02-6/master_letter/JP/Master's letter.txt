@@ -1,0 +1,36 @@
+仏教用語／梵語の使用条件（両方を満たす必要がある）：
+1. 体系的な設計 — 完全なアーキテクチャ設計があること。散発的な装飾ではないこと
+2. 意味の完全な一致 — 工学的機能と仏教学上の定義が真に対応していること
+
+また、ここで厳しく申し明べておくが、私は意図的に行蘊を狭めようとしたわけではない。
+唯識学派が大部分の心所を行蘊に帰属させていることについて、私は非常に問題があると考える。原始仏典にはそのような扱いはない。
+これはおそらく、心理的な活動と転換があれば行蘊に帰属させるという考え方に関係しているのだろう。
+しかし、だからといって心所に他の蘊の特質がないわけではない。例えば想蘊や識蘊の特質である。
+ただし、「活動と転換」という観点を用いてその範疇を拡張することは確かに可能である。
+私がより期待しているのは、研究チームが経典（如是我聞）を通じて行蘊の意義と価値を深く掘り下げることである。
+そして私は行蘊を開放的に保つと裁定した。これはまさに無限の可能性への拡張である。
+
+五蘊、名色識、十二因縁、八識、四智
+これらの心の働きに関する論述は、原始経典においていずれも参照すべき価値がある。
+
+唯識学派による心所の整理には参考価値があるが、我々は慎重に扱うべきである。
+
+----------
+
+master letterが完成した。research input\master_letters\cycle02-6\Master's letter.txt
+
+研究cycle02-6
+参考文献
+research input\prior_research\cycle02-6\
+research input\research_version\cycle02-5_v0.29.0-alpha\
+research input\engineering_delivery\cycle02-5_plan29/
+research input\master_letters\cycle02-6\
+
+openstarry_docの最新版は以下にある
+research input\research_version\cycle02-5_v0.29.0-alpha\openstarry_doc
+
+前バージョンの納品物
+research record\cycle02-5\deliver\
+research record\cycle02-5\todo\
+
+

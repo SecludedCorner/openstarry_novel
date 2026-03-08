@@ -1,0 +1,35 @@
+佛教用语/梵文使用条件（两者皆须满足）：
+1. 系统性规划 — 有完整的架构设计，非零散装饰
+2. 意义完全符合 — 工程功能与佛学定义真正对应
+
+另外我在此严厉申明，我并没有刻意要窄化行蕴。
+唯识学派，将大部分的心所归于行蕴，我觉得非常有问题，原始佛经并没有这样做。
+我想这可能是将心理有活动与转换就归于行蕴有关。
+但不代表心所没有其他蕴的特质，例如想蕴与识蕴。
+但我们确实可以用，活动与转换，的观念来拓展其类别。
+我更期待研究团队，透过，经(如是我闻)，来深掘行蕴的意义与价值。
+而且我裁定行蕴保持开放，这完全就是拓宽的无限的可能。
+
+五蕴、名色识、十二因缘、八识、四智
+这些关于心智运转的论述，原始经典中都是值得借鉴与参考的。
+
+唯识学派对于心所的整理，具备参考价值，但我们应该谨慎对待。
+
+----------
+
+master letter完成了，research input\master_letters\cycle02-6\Master's letter.txt
+
+研究cycle02-6
+参考文件
+research input\prior_research\cycle02-6\
+research input\research_version\cycle02-5_v0.29.0-alpha\
+research input\engineering_delivery\cycle02-5_plan29/
+research input\master_letters\cycle02-6\
+
+openstarry_doc最新的在
+research input\research_version\cycle02-5_v0.29.0-alpha\openstarry_doc
+
+上一个版本的交付
+research record\cycle02-5\deliver\
+research record\cycle02-5\todo\
+
